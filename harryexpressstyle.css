@@ -1,0 +1,199 @@
+/* child selector  */
+/* it means that we are selecting the child elemtns of the main tag  */
+/* basically we are selecting specifficaly elemts inside the tag  */
+ul>li>p{
+    background-color: green;
+}
+
+/* in this way we can select only the child elements of the tag */
+ul{
+    /* background-color: yellow; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* the later the css is more priority in order */
+/* this is the child selector  */
+ul>p>a{
+    background-color: blueviolet;
+}
+/* so it will sleect only the dorect child  */
+/* it follows th eorder hierarchy and do changes in the order */
+
+
+/* descendent selector means that property will appply to any of the descendent not necessary it should be in th eorder */
+ul p a{
+    background-color: blueviolet;
+}
+
+
+
+/* but if we want that any descemndent of the div contaisn the p  */
+/* it is called the descendent selector  */
+ul li p{  
+    color: rgb(145, 164, 37);
+    font-weight: bolder;
+}
+/* this is called th edescendent selecttor  */
+
+/* so ul>li>p means we are accessing the direct child of it  */
+/* ul li p means any p inside the ul goes withthe property */
+
+/* pseudo selector  */
+a:hover{
+    background-color: chartreuse;
+    font-size: x-large;
+}
+a:active{
+    color: rgb(220, 220, 220);
+}
+
+a:visited{
+    background-color: coral;
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Young Serif', serif;
+    /* text-transform: capitalize; */
+    /* text-decoration: underline; */
+    /* so baiscally it will change the property of the text decoration 
+     */
+     /* text-decoration-line: overline; */
+    /* text-decoration-color: aqua; */
+
+
+}
+
+
+/* for alignment we use the text align property  */
+
+
+.text{
+    color: red;
+    border: 2px solid rgb(0, 129, 0);
+    text-decoration: underline;
+    /* text-decoration: wavy; */
+    text-transform: capitalize;  
+    /* convert all first letter into capital */
+    text-align: justify;
+    text-decoration-color: rgb(1, 221, 255);
+    /* text-decoration-style: dotted; */
+    text-decoration-style:dashed;
+    /* it will change the style of the text decoration only  */
+    text-decoration-thickness: 4px;
+    /* change the thickness of the text decoration of any type */
+    
+
+    /* text overflow tells that what we should do whent the text gets overflow from the box   */
+    width: 554px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+
+    /* so ellipse will make the overflow text tnto the circle format  */
+    /* so clip will cut the extra overflow part  */
+
+    /* overflow is used to make the appearance of the text that how the text should be overflow from the container */
+    /* what we want when the text overflow */
+
+    
+}
+/* basically changing the properties of the text decoration  */
+
+
+
+/* the alignment of the text is done by using the text align  */
+/* also remember about the  */
+
+/* so we can have the multiple type of the selector in the css 
+like the child selector and the descendent seleecotr  */
+/* simple selector are of the id , class and the elemetn
+we can also use the child and the desendent selector in it also 
+
+the child selector means 
+*/
+
+/* it will follow thois hierarchty onmly no other tag will come in between it so it is called the Child selector  */
+/* p>div>a>li>ol>li{
+    /* then i will apply this property background-color: aliceblue; */
+
+
+/* this is called the Descendent seelctor as it does not matter the orrder of the tags */
+/* p li div p{
+
+} */
+
+/* for the child selector we use the arrow  and child selector must be direct child  */
+
+
+.box1{
+    background-color: red;
+    margin: 50px;
+    border: 2px solid red;
+    height: 200px;
+    width: 600px;
+    /* borderr box will takes into the account of padding and border */
+    box-sizing: border-box;
+    padding: 10px;
+}
+.box2{
+    margin: 50px;
+    background-color: rgb(19, 156, 113);
+    border: 2px solid red;
+    height: 200px;
+    width: 600px;
+    /* borderr box will takes into the account of padding and border */
+    box-sizing: border-box;
+    padding: 10px;
+
+
+
+
+/* so as we can see that the box sizing borde box includes the height and the weight with the border and padding in  it 
+
+otherwise it will take the height and width of the all content only */
+
+}
+
+/* so basically box modal has border box which means that it will take the account of only the content padding hte border with it 
+
+other wise if we set the height of the box then the whole height will be in the content only */
+
+
+/* css exercise */
+div>p{
+    border:2px solid red;
+    background-color: aqua;
+}
+
+
+.boxshadow{
+    border: 2px solid red;
+    padding: 52px;
+    margin: 152px;
+    /* outline: 5px solid green; */
+    /* outline-offset: 5px; */
+    display: inline;
+
+/* border is inside the box modal and outline is outside */
+/* borderr is a part of the box modal and outline is not  */
+
+}
+
+
+/* for the box shadow we have the boxshadow and text we have the textshadow property
+
+dont learn the syntax as we can see it from the net also  */
+
+/* outline is not the part of the box modal  */
+
+/* if the display is inline it will not respect the padding top so we need to use the inline block display  */
+/* so in the display inline it will not respect the padding , margin top and bottom  */
+
+/* aslo we cannot set the width in the inline so for that we need to use the inline block */
+
+
+/* dispaly none means it will remove the box and the space also  */
+/* but visibilty hidden intacct the space but it eill remove the box  */
+
+
