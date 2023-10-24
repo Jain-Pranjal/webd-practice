@@ -29,3 +29,27 @@ a:active{
 a:link{
     background-color: rgb(163, 239, 163);
 }
+
+
+/* so the height and the width given to it is fully of the content inside the box and padding and border is diff  */
+.box{
+    border: 2px solid red;
+    background-color: darksalmon;
+    height: 125px;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+/* widht into heigt */
+
+/* the border box takes into account of the padding and border into ot 
+excluding the margin 
+ */
+
+
+#first:hover{
+    text-decoration: underline;
+    animation: forwards;
+}
+
