@@ -56,3 +56,27 @@ excluding the margin
     animation: forwards;
 }
 
+/* here we will see the selector  */
+/* so basically we have the same type ofselector  then wee measure the specificty jo bhi baad me hoga */
+
+/* and for the diff type of the selector we measure using the specificty */
+p{
+    color: blue;
+}
+.cred{
+    color: red;
+}
+.cyellow{
+    color: yellow;
+}
+.cpink{
+    color:pink;
+}
+
+p{
+    color: aqua;
+}
+/* inline > id > class > element > universal  */
+
+
+
