@@ -40,6 +40,9 @@ a:link{
     padding: 5px;
     margin: 5px;
     box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: clip;
+    text-align: center;
 }
 /* widht into heigt */
 
