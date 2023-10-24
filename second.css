@@ -1,0 +1,31 @@
+div>p{
+    color: red;
+}
+/* so basically it means that every p tag inside the  div tage exactly one time will show the code  */
+
+div p{
+    color: blue;
+}
+/* this means that any p tag isnide any order will apply this property no matter of the order */
+/* these are the descendent of the div  */
+
+
+/* this is a child selector  */
+div>p{
+    color: red;
+}
+/* it should follow a specific order in it  */
+
+a:hover{
+    background-color: red;
+}
+a:visited{
+    background-color: aqua;
+}
+a:active{
+    background-color: yellow;
+}
+/* for the link which is not visited by the user  */
+a:link{
+    background-color: rgb(163, 239, 163);
+}
