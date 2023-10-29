@@ -194,3 +194,31 @@ nav>ul>li{
     list-style: disc inside;
     list-style-type: "❤️";
 }
+
+
+/* we can handle the overflow property using the overfloww */
+
+.mycont4{
+    width: 10vw;
+    height: 10vh;
+    border: 2px solid rgb(0, 0, 0);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    /* wrap means that we are wrapping the text so it will no go on the next line  */
+    white-space: nowrap;
+    /* it will remove the white space and all thetext will be in the horizontal line only */
+}
+
+
+
+
+
+
+
+
+
+
+
