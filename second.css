@@ -121,9 +121,9 @@ viewport means that the device where we are seeing our webiste is called viewprt
 .mycont{
     border: 3px solid blueviolet;
     box-sizing: border-box;
-    width: 50vw;
+    width: 25vw;
     display: inline-block;
-    padding: 55px;
+    padding: 10px;
     margin: 2px;
     /* display: none; */
     /* it will delete the space and remove the element also  */
@@ -138,9 +138,9 @@ viewport means that the device where we are seeing our webiste is called viewprt
 .mycont1{
     border: 3px solid rgb(26, 196, 179);
     box-sizing: border-box;
-    width: 50vw;
+    width: 25vw;
     display: inline-block;
-    padding: 55px;
+    padding: 10px;
     margin: 2px;
     font-size: 55px;
 }
@@ -148,3 +148,33 @@ viewport means that the device where we are seeing our webiste is called viewprt
 /* display none will remove the element as well as it remove the space aslo also 
 visibility hidden will reserved the space of the element and hide the element from the screen  */
 
+
+
+/* outline and shadow  */
+.mycont2{
+    border: 3px solid blueviolet;
+    box-sizing: border-box;
+    width: 25vw;
+    /* display: inline-block; */
+    padding: 10px;
+    margin: 2px;
+    box-shadow: 5px 5px 15px 5px green inset;
+    /* take the syntax of the shadow fromt he internet only */
+    text-shadow: 2px 2px 2px red;
+}
+.mycont3{
+    border: 3px solid blueviolet;
+    box-sizing: border-box;
+    width: 25vw;
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    outline: 2px solid red;
+    outline-offset: 5px; 
+    border-radius: 5px;
+    /* we change the outline offset position  */
+    /* also we cannot change the outline radius  it can only be changed when we change the border radius as it follows the border only */
+}
+
+/* outline is not a part of the box modal but border is 
+moreover outline is outside and border is inside */
