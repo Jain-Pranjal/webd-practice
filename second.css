@@ -79,4 +79,43 @@ p{
 /* inline > id > class > element > universal  */
 
 
+/* in this we have become more specific by providing more specificity by the element and class selctor  */
+p.pred{
+    color:pink;
+    background-color: black;
+}
+
+/* we tend to use the vh and vw as width and height for the dynaomic changes in the vewport 
+
+viewport means that the device where we are seeing our webiste is called viewprt so jo bhi uska size hoga then it will adjust the size of the container*/
+.container{
+
+    /* it will only be center if it is a block element  */
+    width: 80vw;
+    /* height: 100vh; */
+    border: 2px solid green;
+    margin: auto;
+    font-size: 20px;
+    /* display: inline-block; */
+    /* so inline cannot be able to center the div */ 
+}
+/* so the vh and vw will take the whole height and width of the screen  */
+
+.container p{
+    font-size: 1em;
+}
+
+/* em unit is th eunit ke jab inherrit karke esko etna fontsize mil rha tha then uska kitna guna */
+
+/* so basically em just inheit the size from the parent and then it multiplies by he number */
+
+/* em unit will make the guna of the parent size */
+/* rem is the reoot unit means the root element ie the html element so if we we set the size of the root elemtn html then we can use the rem unit  */
+
+
+/* max width and max height cna be used to set the particluar height and width ke esse to jyada nhi lega 
+
+*/
+
+
 
