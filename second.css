@@ -178,3 +178,19 @@ visibility hidden will reserved the space of the element and hide the element fr
 
 /* outline is not a part of the box modal but border is 
 moreover outline is outside and border is inside */
+
+
+nav>ul>li{
+    /* list-style: none;  */
+    /*it will remove the markers from the list */
+    background-color: yellow;
+    list-style-position: inside;
+    /* basiclaly it will put the marker inside the list  */
+    border: 2px solid red;
+    list-style-type: "💃";
+    
+    
+    /* we can write all thing in one line  */
+    list-style: disc inside;
+    list-style-type: "❤️";
+}
