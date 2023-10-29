@@ -116,6 +116,35 @@ viewport means that the device where we are seeing our webiste is called viewprt
 /* max width and max height cna be used to set the particluar height and width ke esse to jyada nhi lega 
 
 */
+/* to set the width and heoigth in inline use inline - block  */
 
+.mycont{
+    border: 3px solid blueviolet;
+    box-sizing: border-box;
+    width: 50vw;
+    display: inline-block;
+    padding: 55px;
+    margin: 2px;
+    /* display: none; */
+    /* it will delete the space and remove the element also  */
+    font-size: 55px;
+    /* visibility: hidden; */
+    /* it will retain the space but hides the element */
 
+    display: flex;
+    justify-content: center;
+    
+}
+.mycont1{
+    border: 3px solid rgb(26, 196, 179);
+    box-sizing: border-box;
+    width: 50vw;
+    display: inline-block;
+    padding: 55px;
+    margin: 2px;
+    font-size: 55px;
+}
+
+/* display none will remove the element as well as it remove the space aslo also 
+visibility hidden will reserved the space of the element and hide the element from the screen  */
 
