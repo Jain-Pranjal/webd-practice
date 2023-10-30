@@ -255,6 +255,33 @@ perspective
 
 
 
+ /* in this way we just need to change the variable at once only and then we can change the whole website color */
+
+:root{
+    --color:rgb(214, 230, 0);
+    --seccolor:rgb(14, 141, 62);
+    --textcolor:black;
+}
+
+.variable{
+    background-color: var(--color);
+    color: var(--seccolor);
+    /* here it will only use the global variable  */
+}
+
+
+.variable p{
+    --seccolor:rgb(255, 125, 125);
+    /* making the local variable and overriding it  */
+    background-color: var(--seccolor);  
+    color: var(--textcolor);
+
+}
+/* the scope of the local variable is withinn the particlaur style only */
+
+
+/* aslo if we dont want the global variable to be the same color them we canm override it also by making the local variable  */
+
 
 
 
