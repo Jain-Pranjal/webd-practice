@@ -213,6 +213,62 @@ nav>ul>li{
 }
 
 
+.bigbox{
+    border: 2px solid black;
+    height: 133px;
+    width: 80vw;
+    padding: 3px;
+    margin: 3px;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color: rgb(21, 255, 0);
+    position: relative;
+    top: 177px;
+    left: 126px;
+    z-index: 2;
+        
+}
+.box3{
+    
+    background-color: rgb(0, 0, 255);
+    /* position: sticky; */
+    /* bottom: 5px; */
+}
+.box4{
+    background-color: rgb(255, 0, 0);
+    
+}
+
+/* there are some more properties that are also consider as the positioned property:- 
+transform 
+filter
+perspective 
+ */
+
+ /* all these 3 properties are also be considered as the positioned property so we use them also to set the psoition of th absolute position  */
+
+ /* so these properrts also make them as the position property and element set as absolute can be adjusted to 3 properties also  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
