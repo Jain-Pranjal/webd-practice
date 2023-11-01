@@ -282,11 +282,78 @@ perspective
 
 /* aslo if we dont want the global variable to be the same color them we canm override it also by making the local variable  */
 
+@media only screen and (max-width :455px){
+    body{
+        background-color: red;
+    }
+}
+/* the syntax for the media query is :
+@media not|only media_device 
+
+in most cases we use" only "  and there are multiple screen device which we can use such as screen , speech , print etc
+
+*/
 
 
 
+/* here we can select the first child only to have the specific property */
+
+/* it means that if the box is the fitrst child of the boxes then the property will apply to it only  */
+.box:first-child{
+    background-color: red;
+}
+ 
+/* selecting only the first line of the box  */
+.box::first-line{
+    background-color: blue;
+    color: whitesmoke;
+}
+
+/* the universal selector can aslo be used inside the specific box  */
+.boxes *{
+    /* now this propertty will apply to all elements indide it  */
+    padding: 5px;
+    margin: 15px;
+    border: 2px solid green ;
+}
+
+/* we can aslo do the groupikng of the selector separate them with the commas  */
+
+/* we can use the nth child property to target the children of the webpage */
+
+/* so we are targetting the odd child of the box  */
+.box:nth-child(odd){
+    background-color: aqua;
+}
 
 
+/* before and after is used to add the content dynamically into the webpage  */
+
+/* before and after  */
+.boxes::before{
+    content:"this is before pranjal ";
+    color: gold;
+    pointer-events: none;
+}
+
+.boxes::after{
+    content: "hemlo this is after which is after pranjal";
+    color: rgb(48, 77, 19);
+    font-size: 25px;
+}
+
+/* this property is used for selecting the elements inside a webapge  */
+::selection{
+    color:brown;
+    background-color: yellow;
+    /* font-size: large; */
+}
+
+
+input::placeholder{
+    color: blueviolet;
+    font-size: 20px;
+}
 
 
 
