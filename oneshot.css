@@ -1,10 +1,91 @@
-.class1{
-    background-color: red;
+.class1 {
+  background-color: red;
+}
+
+.class2 {
+  background-color: yellow;
+  list-style: square;
+  list-style: inside;
+}
+
+.back {
+  border: 2px solid red;
+  background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg");
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-attachment: fixed;
+  /* now it is fixes to the background of the webpage  */
+
+  /* all this we cando in shorthand  */
+  background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")
+    no-repeat center left;
+  background-size: 400px;
+}
+
+/* we can also provide the attcahment property to the background 
+by background attachment  */
+
+.box1 {
+  height: 311px;
+  width: 255px;
+  border: 2px solid red;
+  background: yellow;
+  margin: auto;
+  /* margin auto will center the element in only the x axis  */
+
+  /* by making the margin auto we can center the position of the div 
+    it will distribute the margin in x axis  */
+
+  outline: 2px solid green;
+  text-align: justify;
+}
+
+#firstlink {
+  text-decoration: none;
+}
+
+
+
+/* we can change the property of the list also  */
+li {
+  background-color: lightcoral;
+  text-decoration: none;
+  /* list-style:none; */
+  list-style-type: decimal;
+  /* list-style-position: inside; */
+  /* it will set the position of the bullets inside or outside  */
+
+/* if we want to hide the list style type then use NONE */
+
 
 }
 
-.class2{
-    background-color: yellow;
-    list-style: square;
-    list-style: inside;
+.navitems{
+    background-color: black;
+    height: 42px;
+}
+
+.navitems li{
+    background-color: darkgreen;
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    /* using the inline block we can use the height and width property also on the blcok elemetns  */
+    color: white;
+    margin-left: 9px;
+    margin-right: 15px;
+    font-size: 27px;
+    padding: 5px;
+}
+.navitems li:hover{
+    background-color: blueviolet;
+}
+
+
+
+li:hover {
+  background-color: rgb(176, 255, 184);
+  cursor: pointer;
 }
