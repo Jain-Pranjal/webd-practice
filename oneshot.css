@@ -88,4 +88,70 @@ li {
 li:hover {
   background-color: rgb(176, 255, 184);
   cursor: pointer;
+  font-family: 'Courier New';
 }
+
+/* we also use the max width prop and max height prop to maintain the specific height and specific width of the element  */
+
+.imgdiv{
+    width: 555px;
+    height: 555px;
+    border: 2px solid red;
+}
+.imag{
+    width: 355px;
+    position: relative;
+    left: 91px;
+  top: 112px;
+    
+}
+
+.blur{
+    width: 65px;
+    height: 65px;
+    background-color: red;
+    position: relative;
+    top: 230px;
+    left: 236px;
+    z-index: 2;
+    filter: blur(4px);
+}
+
+
+.myflex{
+    /* this is the parent of the flex box so make this as a flexbox 
+     */
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     background-color: black;
+     /* for making the flex box horizontal center  */
+
+}
+
+/* it will have h flex items inside the flex container  */
+.myflex >div{
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    margin: 8px;
+}
+
+/* by default the property of flex wrap is no wrap so it will not wrap by sqeeezing 
+by changing into the wrap it will wrap into the new line  */
+
+
+/* for making horizontal alignment  use the justify content */
+/* for making vetical alignment use the align items  */
+
+
+
+
+/* justify content for the horizontal alignment  */
+/* align items for the vertical alignment  */
+
+
+
+
+
