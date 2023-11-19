@@ -355,8 +355,9 @@ input::placeholder{
     font-size: 20px;
 }
 
-
-
+body{
+    background-color: grey
+}
 
 
 
