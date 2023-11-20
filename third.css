@@ -63,7 +63,20 @@ li:hover{
     cursor: pointer;
 }
 
+.over{
+    width: 34px;
+    border: 2px solid rebeccapurple;
+    /* white-space:nowrap; */
+    overflow:auto;
+    /* height: 34px; */
+    /* auto gives the scrool bar if we tackle the overflow probelm  */
+    text-overflow: ellipsis;
+}
 
+/* clip also disable the prgramatically scrooling of the content  */
+/* while the hidden aloows the programatically scrooling */
+
+/* always try to use the overflow auto property as it will only add the scrool bar to the overflow happens otherwise it will not  */
 
 
 
