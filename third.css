@@ -11,6 +11,21 @@ body{
     display: inline-flex;
     border: 2px solid blue ;
     padding: 5px;
+    font-size: 50px;
     /* visibility: hidden; */
 }
+
+.box{
+    box-shadow:  20px 20px 50px 10px pink inset;
+    text-shadow: 8px red;
+}
+
+/* outline is not a part of the box modal that why we can move it freely */
+.textshadow{
+    text-shadow: 5px 5px 10px red;
+    outline: 3px solid red;
+    outline-offset: 5px;
+}
+
+
 
