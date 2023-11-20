@@ -1,7 +1,7 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
-}
+} */
 body{
     background-color: grey;
 }
@@ -26,6 +26,51 @@ body{
     outline: 3px solid red;
     outline-offset: 5px;
 }
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* bascially we always make the flexbox to the bigger container and make its items as the flex items and apply all the properties to the big container only so that it apply all those to the items  */
+
+.liststyle li {
+    display: inline-block;
+  margin: 7px;
+    margin-left: 7px;
+  margin-left: 21px;
+
+}
+
+.list li{
+    list-style: circle;
+    list-style-type: "👻";
+    list-style-position: inside;
+    background-color: red;
+    /* list-style: none; */
+    /* by using this we can remove the marker  */
+}
+
+.list ul{
+    background-color: rgb(107, 210, 107);
+}
+
+/* initially the marker is outside the li and in the ul but we can also change the position of the marker to be outside or inside  */
+
+
+li:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 
 
 
