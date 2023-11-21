@@ -16,7 +16,7 @@ body{
 }
 
 .box{
-    box-shadow:  20px 20px 50px 10px pink inset;
+    box-shadow:  20px 20px 50px 10px rgb(255, 58, 91) inset;
     text-shadow: 8px red;
 }
 
@@ -78,12 +78,44 @@ li:hover{
 
 /* always try to use the overflow auto property as it will only add the scrool bar to the overflow happens otherwise it will not  */
 
+@media only screen and (max-width : 455px){
+    body{
+        background-color: blue;
+
+    }
+}
+/*          media type  */
+
+/* media not|only screen and expresseion  */
 
 
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    body{
+        background-color: aqua;
+    }
+
+    .boxes{
+        flex-wrap: wrap;
+    }
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
 
 
+@media only screen and (orientation : portrait){
+    body{
 
+        background-color: purple;
+    }
+}
 
-
-
-
+/* we can also change the orientation  */
