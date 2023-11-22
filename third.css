@@ -160,6 +160,30 @@ when set the element will see its first positioned parent and will poisiioned wr
 /* the element will align iteslef acc to the parent element only eother it can be any positioned no matter othe than static */
 
 
+.card{
+    width: 350px;
+    height: 427px;
+    border: 2px solid red;
+
+}
+
+.cardimg{
+    position: relative;
+  margin: auto;
+  border: 2px solid #4f0;
+  border-radius: 18px;
+  height: 219px;
+  width: 286px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.cardimg img{
+   position: absolute;
+   border-radius: 18px;
+}
 
 
 
