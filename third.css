@@ -16,7 +16,7 @@ body{
 }
 
 .box{
-    box-shadow:  20px 20px 50px 10px rgb(255, 58, 91) inset;
+    /* box-shadow:  20px 20px 50px 10px rgb(255, 58, 91) inset; */
     text-shadow: 8px red;
 }
 
@@ -102,12 +102,14 @@ li:hover{
 .boxes{
     display: flex;
     flex-direction: row;
+
 }
 
 .box{
     width: 200px;
     height: 200px;
     margin: 5px;
+    /* position: relative; */
 }
 
 
@@ -119,3 +121,57 @@ li:hover{
 }
 
 /* we can also change the orientation  */
+
+
+/* position property */
+.box1{
+    position: relative;
+    left: 88px;
+    background-color: aqua;
+}
+
+/* by default position is static so we cannot apply top bottom left roght  */
+
+.box2{
+    z-index: 1;
+    background-color: red;
+}
+
+
+/* the absolute position is related to the parent position 
+when set the element will see its first positioned parent and will poisiioned wrt to that parent  */
+.parent{
+    position: relative;
+    border: 2px solid red;
+}
+
+/* by making the absolute posiition the element will posiitioned itself wrt to first parent posiitioned element  */
+
+
+.pos{
+    border: 2px solid red;
+    position: sticky;
+    height: 50px;
+    width: 100vw;
+    top: 0px;
+}
+
+/* assolute position will set to its parent positioned element other than the static position to it  */
+/* the element will align iteslef acc to the parent element only eother it can be any positioned no matter othe than static */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
