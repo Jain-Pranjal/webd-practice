@@ -186,8 +186,38 @@ when set the element will see its first positioned parent and will poisiioned wr
 }
 
 
+/* for making the css variable  */
+/* firsr we declare the variable and its properties and then we only have to change the value only  */
+:root{
+    /* global variable declaration  */
+    --color:blue;
+    --seccolor:rgb(9, 9, 104);
+
+}
+
+/* so just we have to change the variabel value to change the value of all overall wesite theme  */
+p.var{
+    color: var(--color);
+}
+p.var2{
+    color: var(--seccolor);
+}
+
+p.localvar{
+    /* this will become the local variable */
+    --color:pink;
+    background-color: var(--color,red);
+}
+
+/* override the global variable inside the again tag and then using it as the global variable */
+
+/* if we want to use the as the local variable then we can use that by overriding it again in the specific block */
 
 
+/* we also provide the alternate color also in case any variable is not found inside the css document  */
+
+
+/* all the global variable are declared inside the :root element  */
 
 
 
