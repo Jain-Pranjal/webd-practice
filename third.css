@@ -261,6 +261,64 @@ p.localvar{
 
 
 
+div:first-child{
+    background-color: rgb(208, 0, 255);
+}
+
+/* that means it will check for the first child in the doc so it will check whethet dic is tthe first child  */
+
+.sub::first-line{
+    color: var(--color);
+}
+
+
+/* we can also use the * selector only on the specified things also inside the div  */
+.main *{
+    /* now all these propertoes will only be apply to the main container only  */
+    padding: 13px;;
+}
+
+/* on whole page selection done */
+/* ::selection{
+    background-color: black;
+    color: yellow;
+} */
+
+.sub:nth-child(odd){
+    background-color: cadetblue;
+}
+
+/* by using this we can add content dynamically using the css */
+.main::before{
+    margin: 55px;
+    content: "pranjal jain is jain";
+    color: red;
+}
+
+.main::after{
+    content: "this is the content after the main ";
+    content: "we can use this for adding the dynamic content using the css dynamcially ";
+    /* content-visibility: none; */
+}
+
+
+.sub::selection{
+    background-color: black;
+    color: yellow;
+    
+}
+
+/* we can target the placeholder also  */
+input::placeholder{
+    color: red;
+}
+
+
+
+
+
+
+
 
 
 
