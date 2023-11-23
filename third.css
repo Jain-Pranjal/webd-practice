@@ -150,7 +150,7 @@ when set the element will see its first positioned parent and will poisiioned wr
 
 .pos{
     border: 2px solid red;
-    position: sticky;
+    /* position: sticky; */
     height: 50px;
     width: 100vw;
     top: 0px;
@@ -161,31 +161,62 @@ when set the element will see its first positioned parent and will poisiioned wr
 
 
 .card{
-    width: 350px;
+    width: 400px;
     height: 427px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    border-radius: 30px ;
+    background-color: white;
 
 }
 
 .cardimg{
     position: relative;
   margin: auto;
-  border: 2px solid #4f0;
+  /* border: 2px solid #4f0; */
   border-radius: 18px;
   height: 219px;
   width: 286px;
   display: flex;
   align-content: center;
   justify-content: center;
+  padding: 10px;
 
 }
 
+/* the border radius is applies to the image  */
 .cardimg img{
    position: absolute;
-   border-radius: 18px;
+   border-radius: 30px;
+}
+.text{
+    padding: 10px;
+    text-align: justify;
 }
 
+/* basically we are centering the content inside the div */
+/* this is the container that contains the buttoon  */
+/* this contaier is used for alignining the button in middle of the card */
+/* for making changes inside the container we need tok target its child element */
+.capsule{
+    text-align: center;
+    margin-top:18px;
+    
+}
 
+/* padding or margin : y  x */
+.capsule button{
+    background-color: gray;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 6px 19px;
+    border: none;
+}
+
+button:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
 /* for making the css variable  */
 /* firsr we declare the variable and its properties and then we only have to change the value only  */
 :root{
@@ -220,8 +251,13 @@ p.localvar{
 /* all the global variable are declared inside the :root element  */
 
 
-
-
+/* media query */
+/* we will use the only and not to check  */
+@media only screen and (max-width:55px){
+    body{
+        background-color: pink;
+    }
+}
 
 
 
