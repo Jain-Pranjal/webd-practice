@@ -365,7 +365,42 @@ input::placeholder{
     /* transform: translate(55px); */
     /* transform: scale(1.6); */
     transform: translateX(1.6px) skewX(40deg) scale(1.2);
+    transform: translateX(60vw) translateY(50vh);
 }
 
 
 /* we can appy multiple transform propoerty separted by space  */
+
+/* translate property  */
+.trans{
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-out;
+    transition-delay: 1.5s;
+}
+
+/* use this shorthand property */
+.trans{
+    translate: all 1.5s ease-in 3s;
+}
+
+.sidenav{
+    width: 20vw;
+    height: 100vh;
+    border: 2px solid red;
+    transform: translateX(-103%) scale(1.5);
+
+    
+}
+
+.elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.elements li{
+    list-style: none;
+    padding: 15px;
+}
+
