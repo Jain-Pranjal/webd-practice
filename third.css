@@ -345,3 +345,27 @@ input::placeholder{
 /* flex grow will make the flex itesm to grow as per the sixe entred and flex shrunk is the ability for ana element to shrink whwnever necessary */
 
 
+
+.main-trans{
+    margin: 55px;
+    width: 100vw;
+    height: 80vh;
+    border: 2px solid purple;
+}
+
+.trans{
+    height: 150px;
+    width: 150px;
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: rotate(1.5turn); */
+    /* transform: translate(55px); */
+    /* transform: scale(1.6); */
+    transform: translateX(1.6px) skewX(40deg) scale(1.2);
+}
+
+
+/* we can appy multiple transform propoerty separted by space  */
