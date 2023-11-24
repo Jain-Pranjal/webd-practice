@@ -260,10 +260,10 @@ p.localvar{
 }
 
 
-
+/* 
 div:first-child{
     background-color: rgb(208, 0, 255);
-}
+} */
 
 /* that means it will check for the first child in the doc so it will check whethet dic is tthe first child  */
 
@@ -316,10 +316,32 @@ input::placeholder{
 
 
 
+.container{
+    border: 2px solid red;
+    display: flex;
+    height: 80vh;
+    /* apply the properties to center the items in the container  */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    /* basically we use the align content to group all the flex box and then dok the alignment of the followingf */
+    
+    gap: 5px;
+}
 
+.items {  
+    /* flex-grow: 1; */
+    height: 92px;
+    width: 92px;
+    border: 2px solid black;
+    /* margin: 4px; */
+    background-color: blueviolet;
+    flex-grow: 5;
+    flex-shrink: 2;
+}
 
-
-
-
+/* flex grow will make the flex itesm to grow as per the sixe entred and flex shrunk is the ability for ana element to shrink whwnever necessary */
 
 
