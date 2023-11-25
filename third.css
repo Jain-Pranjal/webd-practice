@@ -377,6 +377,7 @@ input::placeholder{
     transition-duration: 1.5s;
     transition-timing-function: ease-out;
     transition-delay: 1.5s;
+    transition: all 1500ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
 }
 
 /* use this shorthand property */
@@ -388,7 +389,7 @@ input::placeholder{
     width: 20vw;
     height: 100vh;
     border: 2px solid red;
-    transform: translateX(-103%) scale(1.5);
+    transform: translateX(-103%) ;
 
     
 }
@@ -398,9 +399,22 @@ input::placeholder{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 .elements li{
     list-style: none;
     padding: 15px;
 }
 
+
+
+
+/* for making the animation we use the keyframes */
+@keyframes pranjalkaanimation {
+    from{
+
+    }
+    to{
+        transform: translate(1000px);
+    }
+}
