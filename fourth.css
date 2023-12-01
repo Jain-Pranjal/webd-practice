@@ -45,7 +45,6 @@ p,span.var1,h3.var2{
 
 /* give thw width full for the responsieness of the site   */
 /* 
-*/
 :root{
     --primary-bg:gray;
     --primary-text:black;
@@ -78,11 +77,37 @@ ul>li{
 ul>li:hover{
     font-weight: bold;
 }
+*/
 
+/* now we can select the universal prop inside the any container */
+.boxes *{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    margin: 5px;
+}
 
+.box:nth-child(odd){
+    background-color: pink;
+}
+.boxes::before{
+    color: white;
+    content: "pranjal jain is writing before";
+}
 
+.boxes::after{
+    color: white;
+    content: "pranjal jain is writing after";
 
+}
 
+.box::first-letter{
+    background-color: coral;
+}
+
+.var2::first-letter{
+    text-transform: scale(1);
+}
 
 
 
