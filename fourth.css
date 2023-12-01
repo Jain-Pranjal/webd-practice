@@ -40,3 +40,50 @@ p,span.var1,h3.var2{
         background-color:#262520;
     }
 }
+
+/* MULTI COLOR NAV BAR */
+
+/* give thw width full for the responsieness of the site   */
+/* 
+*/
+:root{
+    --primary-bg:gray;
+    --primary-text:black;
+    
+}
+
+.multi{
+    width: 100vw;
+    height: 3.5rem;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+ul>li{
+    color: var(--primary-text);
+    padding: 19px;
+    list-style: none;
+    cursor: pointer;
+}
+
+ul>li:hover{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
