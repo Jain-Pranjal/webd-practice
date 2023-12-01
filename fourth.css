@@ -25,7 +25,18 @@ p,span.var1,h3.var2{
     padding: var(--defpad);
     /* we can aslo overwrite the variable here by makin it local variable  */
 }
+/* for the local  variable making we have to do the changes inside the style of the particular one only  */
 
 
+/* media query  */
+@media only screen and (max-width:555px){
+    body{
+        background-color: blue;
+    }
+}
 
-/* for th elocal variable making we have to do the changes inside the style of the particular one only  */
+@media only screen and (min-width:325px){
+    body{
+        background-color:#262520;
+    }
+}
