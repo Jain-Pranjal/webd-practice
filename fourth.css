@@ -1,0 +1,31 @@
+body{
+    background-color: gray;
+    
+}
+::selection{
+    background-color: blueviolet;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* we declare the global variable inside the root that is accessed anywhere */
+/* all these are used for msking the brand color template  */
+:root{
+    --primary-color: rgb(12, 245, 47);
+    --secondary:rgb(198, 183, 20);
+    --secondary:rgb(0, 167, 176);
+    --defpad:25px;
+    
+}
+p,span.var1,h3.var2{
+    --secondary:rgb(243, 149, 149);
+    color: var(--secondary,brown);
+    padding: var(--defpad);
+    /* we can aslo overwrite the variable here by makin it local variable  */
+}
+
+
+
+/* for th elocal variable making we have to do the changes inside the style of the particular one only  */
