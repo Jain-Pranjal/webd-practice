@@ -151,6 +151,8 @@ h1,h2,h3{
     flex-grow: 2;
 }
 
+
+/* 
 .nav{
     display: flex;
     color: white;
@@ -168,7 +170,6 @@ nav{
 .layout{
     position: sticky;
     top: 0px;
-    /* filter: blur(5px); */
     backdrop-filter: blur(10px);
 }
 li{
@@ -186,16 +187,6 @@ li{
     justify-content: space-around;
 }
 
-.item{  
-    /* flex-grow: 1; */
-    height: 338px;
-    width: 192px;
-    border: 2px solid black;
-    margin: 14px;
-    background-color: blueviolet;
-    /* flex-grow:1; */
-}
-
 .footer{
     background-color: violet;
     width: 100%;
@@ -203,10 +194,54 @@ li{
     
 }
 .orange-box {
-    height: 32px;
     width: 32px;
     background: orange;
     position: fixed;
     bottom: 12px;
     right: 23px;
-    border-radius: 60px;}
+    border-radius: 60px;
+}
+
+.item{  
+    height: 32px;
+    height: 338px;
+    width: 192px;
+    border: 2px solid black;
+    margin: 14px;
+    background-color: blueviolet;
+}
+
+*/
+
+
+/* making of the nav bar  */
+.header{
+    position: sticky;
+    top: 0px;
+}
+.logo img{
+    margin-left: 40px;
+    width: 180px;
+    height: 55px;
+}
+nav{
+    background-color: bisque;
+    height: 16vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ 
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+li{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
