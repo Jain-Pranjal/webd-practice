@@ -80,6 +80,7 @@ ul>li:hover{
 */
 
 /* now we can select the universal prop inside the any container */
+/* 
 .boxes *{
     width: 50px;
     height: 50px;
@@ -98,7 +99,7 @@ ul>li:hover{
 .boxes::after{
     color: white;
     content: "pranjal jain is writing after";
-
+    
 }
 
 .box::first-letter{
@@ -108,7 +109,43 @@ ul>li:hover{
 .var2::first-letter{
     text-transform: scale(1);
 }
+*/
 
+h1,h2,h3{
+    color: white;
+}
 
+.container {
+    border: 2px solid red;
+    display: flex;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* aslo use the gap prop inside the container prop */
+}
 
+.item {  
+    /* flex-grow: 1; */
+    height: 92px;
+    width: 92px;
+    border: 2px solid black;
+    /* margin: 4px; */
+    background-color: blueviolet;
+    flex-grow:1;
+}
 
+/* all the items are laid to the flex direction  */
+
+.order-1{
+    order: 1;
+}
+
+/* so maximum order will make the item to be present at the last   */
+
+.flex-grow{
+    /* flex-grow:2; */
+    flex-grow: 2;
+}
