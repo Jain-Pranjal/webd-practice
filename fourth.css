@@ -215,6 +215,8 @@ li{
 
 
 /* making of the nav bar  */
+
+/* 
 .header{
     position: sticky;
     top: 0px;
@@ -245,3 +247,65 @@ li{
     cursor: pointer;
     font-size: 20px;
 }
+*/
+
+/* GRIDS */
+.cont {
+    width: 80vw;
+    height: 100vh;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 155px 190px;
+    grid-template-rows: 55px 99px;
+    
+}
+.items {
+    border: 2px solid red;
+    height: 55px;
+    width: 55px;
+}
+
+
+/* css trasnform  */
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: rotate(0.125turn); */
+    /* transform-origin: -50% -50%; */
+    /* transform: rotateZ(9deg); */
+    /* transform: skewY(34deg); */
+    /* transform: translateY(100%) skewX(40deg) translateX(45%); */
+
+    transform: rotate(190deg);
+    transform: rotate(10.125turn);
+    transform: rotateX(91deg);
+    transform: scale(1.5);
+
+
+}
+
+.container {
+    margin: 55px;
+    width: 100vw;
+    height: 80vh;
+    border: 2px solid purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
