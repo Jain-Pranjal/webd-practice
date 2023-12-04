@@ -267,6 +267,47 @@ li{
 
 
 /* css trasnform  */
+/* 
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* transform: rotate(0.125turn); */
+    /* transform-origin: -50% -50%; */
+    /* transform: rotateZ(9deg); */
+    /* transform: skewY(34deg); */
+    /* transform: translateY(100%) skewX(40deg) translateX(45%); */
+    /* 
+    transform: rotate(190deg);
+    transform: rotate(10.125turn);
+    transform: rotateX(91deg);
+    transform: scale(1.5); */
+    
+    
+    /* } */
+    /* 
+    .container {
+        margin: 55px;
+        width: 100vw;
+        height: 80vh;
+        border: 2px solid purple;
+    }
+    */
+    
+    
+    /* transition property */
+.container {
+    margin: 55px;
+    width: 100vw;
+    height: 80vh;
+    border: 2px solid purple;
+    background-color: aquamarine;
+}
+
 .box {
     height: 50px;
     width: 50px;
@@ -275,26 +316,20 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform: rotate(0.125turn); */
-    /* transform-origin: -50% -50%; */
-    /* transform: rotateZ(9deg); */
-    /* transform: skewY(34deg); */
-    /* transform: translateY(100%) skewX(40deg) translateX(45%); */
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s;
+    background-color: burlywood;
+}
 
-    transform: rotate(190deg);
-    transform: rotate(10.125turn);
-    transform: rotateX(91deg);
-    transform: scale(1.5);
-
+.tr{
+    transform: translateX(90%) scale(1.5);
+    background-color: red;
+    font-weight: bolder;
 
 }
 
-.container {
-    margin: 55px;
-    width: 100vw;
-    height: 80vh;
-    border: 2px solid purple;
-}
 
 
 
