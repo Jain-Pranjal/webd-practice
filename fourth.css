@@ -300,40 +300,110 @@ li{
     
     
     /* transition property */
-.container {
-    margin: 55px;
-    width: 100vw;
-    height: 80vh;
-    border: 2px solid purple;
-    background-color: aquamarine;
+    /* 
+    .container {
+        margin: 55px;
+        width: 100vw;
+        height: 80vh;
+        border: 2px solid purple;
+        background-color: aquamarine;
+    }
+    
+    .box {
+        height: 50px;
+        width: 50px;
+        background-color: beige;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-property: all;
+        transition-duration: 1.5s;
+        transition-timing-function: ease-in;
+        transition-delay: 1s;
+        background-color: burlywood;
+    }
+    
+    .tr{
+        transform: translateX(90%) scale(1.5);
+        background-color: red;
+        font-weight: bolder;
+        
+    }
+    */
+    
+    
+    /* Animation */
+    
+    .container {
+        margin: 55px;
+        width: 100vw;
+        height: 80vh;
+        border: 2px solid purple;
+        background-color: aquamarine;
+    }
+    
+    .box {
+        height: 50px;
+        width: 50px;
+        background-color: beige;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: pranjalanimation 1s ease-in 1s infinite  ;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation-direction: alternate;
+    }
+    
+    
+    @keyframes pranjalanimation{
+        
+        to{
+            transform: translateX(500px) scale(1.5);
+        }
+    }
+    
+    
+    
+    .ball{
+        height: 150px;
+        width: 150px;
+        border: 2px solid red;
+        background-color: rgb(85, 0, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        animation: BallAnimation 0.2s ease-in 0.5s infinite alternate backwards;
+        /* animation: rotation 2s ease-out 1s infinite alternate; */
 }
 
-.box {
-    height: 50px;
-    width: 50px;
-    background-color: beige;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-property: all;
-    transition-duration: 1.5s;
-    transition-timing-function: ease-in;
-    transition-delay: 1s;
-    background-color: burlywood;
-}
 
-.tr{
-    transform: translateX(90%) scale(1.5);
-    background-color: red;
-    font-weight: bolder;
-
+@keyframes BallAnimation {
+    from{
+        /* transform: translateY(150px); */
+        background-color: orange;
+    }
+    to{
+        transform: translateY(50px);
+        background-color: lime;
+    }
 }
 
 
-
-
-
+/* also we can have the keyframes by ssing the %  */
+@keyframes rotation {
+    0%{
+        transform: rotate(72deg);
+    }
+    20%{transform: rotate(72deg);}
+    40%{transform: rotate(72deg);}
+    60%{transform: rotate(72deg);}
+    80%{transform: rotate(72deg);}
+    100%{transform: rotate(72deg);}
+    
+}
 
 
 
