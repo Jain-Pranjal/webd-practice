@@ -407,7 +407,7 @@ li{
 
 
 .parent{
-    margin: 55px;
+        margin: 15px;
         width: 100vw;
         height: 80vh;
         border: 2px solid purple;
@@ -416,7 +416,7 @@ li{
 }
 
 .football{
-    height: 150px;
+        height: 150px;
         width: 150px;
         border: 2px solid red;
         background-color: rgb(85, 0, 255);
@@ -468,4 +468,27 @@ li{
         bottom: 100%;
     }
   }
+
+/* in the  objectt fit cover ther eis a break of the space in the image and we cna controll which part of image we want inside the cover as cver will occupy the whole size of the image height and width  */
+
+.object{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border: 2px solid red;
+    object-position: top right;
+}
+
+
+.box1{
+    background-image: url("https://media.istockphoto.com/id/1433211776/photo/woman-silhouette-in-front-of-the-ocean-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=xGzw_4wTjK0uKJLS42lR7xPsD7tGRTrx-mWBl0ylih4=");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 2px solid red;
+    height: 550px;
+    width: 550px;
+}
+
+
+
 
