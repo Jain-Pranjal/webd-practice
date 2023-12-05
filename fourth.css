@@ -490,5 +490,11 @@ li{
 }
 
 
+.container img{
+    /* filter: blur(10px); */
+    /* filter: brightness(120%); */
+    filter: brightness(120%) contrast(180%);
+    filter: sepia(50%);
+}
 
-
+/* for the multiple prop separte them by space */
