@@ -60,36 +60,89 @@ console.log(typeof(c));
 
 
 // conditional statement 
-let age=36;
-if(age>18 && age<25){
-    console.log("u can vote ");
-}
-else if(age>25 && age<40){
-    console.log("chala bhai gadi mast chala")
-}
-else{
-    console.log("cannot vote")
-}
+
+// let age=36;
+// if(age>18 && age<25){
+//     console.log("u can vote ");
+// }
+// else if(age>25 && age<40){
+//     console.log("chala bhai gadi mast chala")
+// }
+// else{
+//     console.log("cannot vote")
+// }
 
 
 // for matching the value and the type we use the ===
 
 // ternary operator 
-let a=5;
-let b=33;
-console.log(a>b?(a-b):(b-a))
+// let a=5;
+// let b=33;
+// console.log(a>b?(a-b):(b-a))
 // kaam vali statemtmtn ? if : else
 
 
+// in js we dont need to define the datatype for the foloowng it will automatically scan the data type 
+// Loops
+// let a=1;
+// for(let i=0;i<5;i++){
+//     console.log(a+i)
+// }
+
+// basic for loop example 
+for(let j=0;j<10;j++){
+    console.log(j)
+}
 
 
 
+// we use the for in and for of loop for thr object 
+let o={
+    "name":"Pranjal jain",
+    "class":12,
+    "age":20,
+    "year":true
+}
+
+// using the forin loop for printing the key of the object 
+// for (const i in o) {{
+//         // const element = o[key];
+//         console.log(i)
+//         console.log(o[i])  //for printing the elemnt of the key 
+//     }
+// }
+
+// i am using the forin loop so it will print only the key of the object in the js 
+for (key in o){
+    console.log(key)
+    // for printing the element also 
+    console.log(o[key])
+}
+
+// o ke key par kya value hai o[key]
+// basicalyy it is an idex so it will be  like o[1],o[2]
+
+// forof loop is used for iterate loop 
+for (const index of "pranjal") {
+    console.log(index)
+}
 
 
+// while loop 
+let c=0;
+while(c<5){
+    console.log(c)
+    c++;
+}
 
 
+// so we uses the forin loop for printing the keys of the obejct 
+// forof loop is used for the 
+for (const i of "pranjal") {
+    
+}
 
-
+// do while loop will execute one time alwasys 
 
 
 
