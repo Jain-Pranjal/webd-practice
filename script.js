@@ -197,17 +197,45 @@ console.log("the product ans is :",multiply(5,6,3))
 // just we have store the function inside the variable name 
 
 
+// STRINGS in JS
+// so we alwasys try to use the let as it is a block scoped and avoid the use of var as it is a global scope 
+
+// for acessing the all the chatacters in a string we can use the loops and particularly we can use the forof loop 
+
+// in this way we can 
+let love="pranjal jain"
+// console.log(love[5])
+for (const i of love) {
+    console.log(i[0])
+}
+
+// for of loop is used for iterating evertyhing in the iterable object 
+// use the for of loop for iterating in the iterable object 
+
+// we can use the fotmat srting in javascript also 
+let real_name="pranjal jain";
+let city="Delhi"
+console.log(`hello my name is ${real_name} and i am from ${city}`)
+console.log(`hello sir ${real_name} and welcome to u in ${city}`)
+
+// function 
+console.log(city.length)
+console.log(city.toLowerCase())
+
+// for slciing the string 
+console.log(city.slice(3,5))   //direclty use the function slice for slicing the string 
+
+// direlctly use the slice fucntion 
 
 
+// replacing 
+console.log(city.replace("Delhi","agra"))
+console.log(city)
+city=city.replace("Delhi","agra")  // for the permanent replace we need to store them back in the variable 
+console.log(city)
 
 
-
-
-
-
-
-
-
-
+// string are immutable in nature means all after the changes strign orginally not changes 
+// and if we want to show the changes 
 
 
