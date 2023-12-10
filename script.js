@@ -145,13 +145,56 @@ for (const i of "pranjal") {
 // do while loop will execute one time alwasys 
 
 
+// Functions 
+// declaration 
+function myfun(name){
+    console.log("your name is ",name)
+    console.log("hello sir i m "+name+" nice to meet u")
+    console.log("hello sir i m ",name," nice to meet u")
+}
+
+// try to concatenate the string with the variable only  
+
+myfun("jain")
+
+function sum(a,b){
+    // console.log("the sum is : ",a+b);
+    return a+b;
+}
+
+result=sum(2,4)
+console.log("the ans is ",result)
+
+// so we can aslo rturn the value to the variable to the fucntion it had callled to 
 
 
+// but if we want the value to return to any variable then we can use the return keyw ord
+// so remembe that if we want that the function will return the value the the calling  one then we should use the return keyword in the function defination 
+
+// ARROW fucntion 
+// basically we can put the function inside the variable name by using the arrow funciton 
+// we store the function inside the variable so that we can use that variable inside the function 
+
+//using the arrow function 
+const func1=(x)=>{
+    console.log("hi i m ",x)
+}
+// so we have store the function inside the variable name func1
+
+func1(2)
+func1(23)
+func1(24)
+func1(25)
 
 
+// to store the function inside the variable we use the arrow function 
 
+let multiply=(a,b,c)=>{
+    return (a*b*c)
+}
 
-
+console.log("the product ans is :",multiply(5,6,3))
+// just we have store the function inside the variable name 
 
 
 
