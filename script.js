@@ -236,6 +236,188 @@ console.log(city)
 
 
 // string are immutable in nature means all after the changes strign orginally not changes 
-// and if we want to show the changes 
+// and if we want to show the changes then we have to store them into the original string again 
+
+
+
+// ARRAY
+// so basiaclly we use the array in order to keep all the things inside a single variable name and and we can access them by suing the index number 
+// array are mutable in nature 
+// we can access the member inside the array using the index number and and in the array we stote the homogeneous items isndie it 
+
+// objcts and strings are mutbale in natire means we can change them after their creation 
+
+// so we have to remember that in JS array acn have the multiple datatyp ein it as js is a loosely typed language and c++ is statically typed langiauge 
+// thats why in c++ it can have only single data type array while in js we can have multiple datatype array 
+
+// array is basially used tok store the multiple items inside a single variable name 
+let arr=[51,3,131,5,45,5]
+console.log(arr)
+console.log(typeof(arr))  //it is of the type object 
+
+// arrays are mutable in nature so we can change them by refering to their index number 
+arr[0]="pranjal jain"
+console.log(arr)
+
+
+// this shows that string are immutable in nature we cannot change the orginal string 
+// if we don changes in the string it makes the changes by creating a diff string in it 
+
+// let boy="jain sahab"
+// console.log(boy.replace("jain","pyara"))
+// console.log(boy)
+
+// js arrays are the objects in nature 
+
+// methods of the arrays 
+
+// conversion of array to string 
+console.log(arr.toString())
+
+// joining of the operator in th earray 
+console.log(arr.join(" * "))
+
+// pop method adn push method 
+// we can add and remove the element from the array using the pop and push operation 
+arr.pop()  //deletion of the element
+console.log(arr)
+
+arr.push("hola")  //addition of the element
+console.log(arr)
+
+
+// push and pop works on the last elemetn of the array 
+// for working with the first element we need to use the shift and unshift for the addign and poping out from first 
+
+
+arr.unshift("hello")
+console.log(arr)
+
+// for popping out from first we use shift 
+arr.shift()
+console.log(arr)
+
+
+// so basically unshift is push 
+// shift is pop ka bhai 
+
+delete arr[4]
+console.log(arr)
+
+// basially after using the delete memory is allocating but there is no elelment 
+
+// using the delete operation eleement gets deleted but the memory assined remmains there
+
+// so by usign the concat function we can use the array to merge together
+a=["first ","second",54,88.3]
+console.log(a)
+console.log(arr.concat(a))
+
+console.log(arr)
+// so after concating the string dont change the original 
+
+// slice is used for slicing the array from the given index 
+
+
+// for looping inside th earray we can use the for each loop
+console.log(arr)
+arr.forEach(element => {
+    console.log(element)
+});
+
+console.log(arr.slice(1,3))
+
+// for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     console.log(element)
+// }
+
+
+// but we can use the forech loop it is used by using the arrow function 
+// arr.forEach(e=>
+//     {
+//         console.log(arr[e])
+//     })
+
+
+// forof loop id basically used fir iterating only the iterable object isnide the iterating things 
+// for (const i of arr) {
+//     console.log(i)
+// }
+
+// forof loop me we are directly writing the iterator as in the short form it is only the arr[i] same as the i of arr
+
+
+// map filter and reduce 
+
+let simple=[1,2,3,4,5,6]
+// let sqarr=[]
+// for (let i = 0; i < simple.length; i++) {
+//     const element = (simple[i]**2)
+//     sqarr.push(element)
+    
+// }
+// console.log("Square array is : -",sqarr)
+
+
+// this same thing can be sone by using the map and arrow funciton 
+// MAP function 
+let newarr=simple.map(e=>{
+    return e**2
+})
+
+console.log(newarr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
