@@ -369,11 +369,34 @@ let newarr=simple.map(e=>{
 console.log(newarr)
 
 
+// DOM AND BOM
+document.title="pranjal jain"
+// in th dom it will add the inline css for the chanegs in document 
+
+// by using the dom we can direclty sleelct the elemetn and apply the chamges to it 
+// for th finding if the element we can use the child nods, firstchidlnode. lastchildnode
 
 
 
+// so basiaclly first element child will give the first element of the container in the js 
+// if we use th childNodes then we get also the all the child of the node but it also aslo include the textnode which is not considered as the element of the parent 
+// that why we will use the firstelement child
 
 
+// the child nodes contains the text node as well as the comments node so if we are using the document.body.childNodes then we will be able to see all the nodes including the comment as well as the text node 
+
+// for the element we use the document.body.firstElementChild
+
+
+// use the children to get the children of the parent without having the nodes . We will get the children or elelment only of the parent 
+
+// for finding the sibling we use the previouselementsibling 
+// nextelelementsibling 
+// it will taget only the ELEMENT sibling  taht have the same parent in it 
+
+
+// nextsibling contains all the nodes in it 
+// but nextelementsibling will give only the next element 
 
 
 
