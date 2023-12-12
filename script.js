@@ -399,19 +399,56 @@ document.title="pranjal jain"
 // but nextelementsibling will give only the next element 
 
 
+// targetting by the class name 
+let jain=document.getElementsByClassName("box")
+console.log(jain)
+
+jain[0].style.backgroundColor="pink"
 
 
+// targetted by id 
+let blue=document.getElementById("bluebox").style.backgroundColor="blue"
+
+// we can also use the query selector 
+document.querySelector(".box").style.backgroundColor="purple"
+// it will select the FIRST box which have the class box
+
+// the Queryselector will change the property of the first select class box whatever it will find first
+
+// the queryselectorAll will change the properties of all the elements having the class but it will give the HTML collection 
+
+// document.querySelectorAll(".box").style.backgroundColor="blue"
+// CANNOT DO THIS 
 
 
+// now for making all the changs inside the class we need to use the foreach loop 
 
 
+document.querySelectorAll(".box").forEach(e=>{
+    e.style.backgroundColor="green"
+})
+// bsically by using the foreach loop we are traversing all the eleemnts inside it using the arrow function 
 
 
+// therefore we need to iterate all the nodelist items so we need a for loop and then applying all the style properties 
+
+// ttag name basically select all the tag element that we had including the parent parent eleemnt also 
+document.getElementsByTagName("div")
 
 
+// queryselector basicallys select one element startitng vala 
+document.querySelector(".box").style.backgroundColor="black"
+document.querySelector(".box").style.color="white"
 
+// so we can use the query selector to target only the one fisr classs
+// for tagetting all the class we can use the queryselector all by using th efor each loop 
 
+// iterating every element inside taking all the elements havig the class box
+document .querySelectorAll(".box").forEach(e=>{
+    e.style.border="2px solid yellow"
+})
 
+// in this way by applying the foreach loop we can select the every class element and then apply the properties to it 
 
 
 
