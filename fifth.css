@@ -20,3 +20,26 @@ table,tr,th,td{
     border: 2px solid black;
     border-collapse: collapse;
 }
+
+/* use the gap properties inside the flex box  */
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+
+}
+
+.boxes{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border: 2px solid white;
+}
+
+
+.bg-red{
+    background-color: rgb(230, 166, 166);
+}

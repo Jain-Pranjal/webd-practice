@@ -451,19 +451,100 @@ document .querySelectorAll(".box").forEach(e=>{
 // in this way by applying the foreach loop we can select the every class element and then apply the properties to it 
 
 
+// let color=["red","orange","pink","blue","green"]
+
+// // solution to the random color and random background 
+// document.querySelectorAll(".boxes").forEach(e=>{
+//     e.style.backgroundColor="orange"
+
+// })
+
+// // we can target by the classname also 
+// let b=document.getElementsByClassName("boxes")
+// console.log(b)
+// Array.from(b)
+
+
+// inserting and removing elements from the DOM
+// this is helpful when we want to make single pages 
+
+// for viwing the inner html use the imnnerhtml
+console.log(document.querySelector(".cont").innerHTML)
+
+// outerhtml will inclue the the container iteslf and its children 
+console.log(document.querySelector(".cont").outerHTML)
+// so outer html will give me the outer element as well as inner html also 
 
 
 
+// how can we insert and remove eleemnt from the DOM
+
+// outer html will show the outer as well as thr inner one also with it 
+document.querySelector(".cont").outerHTML
+
+// queryselector will selelct only the first class that matches with the name of the class name 
+// for selection of all the classes we need to use the aqueryselecotall with the foreach llop 
+// document.querySelectorAll(".boxes").forEach(e=>{
+//     console.log(e)
+// })
+
+
+// playing with attributes
+document.querySelector(".boxes").getAttribute("style")
+"background-color: red;"
+document.querySelector(".boxes").setAttribute("style","backgroundColor:orange")
+document.querySelector(".boxes").setAttribute("style","background-color:orange")
+ 
+
+
+// insertion into the document 
+let myelement=document.createElement("div")
+myelement.innerHTML="hi i m <b>Pranjal jain</b>"
+myelement.setAttribute("class","color-red")
+document.querySelector(".cont").after(myelement)
+myelement.style.border="2px solid black"
+myelement.style.height="102px"
 
 
 
+// in this way we can append the elemnt at the last of the dcoument 
+// first make the elemnt 
+let myspan=document.createElement("span")
+myspan.innerHTML="hi i m a span and i m appending inside the container "
+document.querySelector(".boxes").append(myspan)
+document.querySelector(".boxes").setAttribute("style","display:inline")
+document.querySelector(".boxes").setAttribute("style","background-color:orange")
 
 
+// this is how i can add the element in the container 
 
 
+// we can also use where to insert the element 
+/*
+prepend :- starting od the container 
+append:- ending of the container
+after :- after the container
+before ;- before the container
+replacewith :- it will directly replace the node with the replace element */
 
 
+// we can also add the element or the HTMl by using the insertAdjacentElement 
+// the insertAdjacenthtml will take a parametet on whee to insert the html 
 
+/*before begin 
+after begin 
+before end 
+after end  */
+
+document.querySelector(".cont").insertAdjacentHTML("beforebegin","<b>hi i m added by using the adjacent html </b>")
+
+// to find all the classes we get the class list 
+
+// we can also add or remove the class using the add or remove
+// moreoer we can toggle the class using the toggle 
+// toggle means on and off of the class
+
+// so we can toggle the class inside the element and we can do toggling of thr class
 
 
 
