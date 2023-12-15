@@ -112,9 +112,36 @@ fname==="pj"?console.log("yes"):console.log("no")
 // }
 // console.log(grade)
 
+// loops 
+// there are various types of loops ; for while foreach forof forin 
+
+// in the javascript th earray can have the multiple datatypes in it 
+// as js a loose typed language so it can contains the multiple datatype inside the array
+let arr=[1,2,3,4,5,6,"pranjal jain"]
+// for (let i =0; i<arr.length;i++){
+//     console.log(arr[i])
+// }
+
+// this is the normal way of looping the items 
+// we can use the forof llop
+
+// so we can use the forof loop for the iterable object 
+for (const iterator of arr) {
+    console.log(arr[iterator])
+}
 
 
-
+let object={
+    "name":"pranjal",
+    class:12,
+    phone:999985515
+}
+for (const key in object) {
+        const element = object[key];  //so it is printing the value of th ekey 
+        console.log(element)
+        
+    }
+console.log(object["name"])
 
 
 
