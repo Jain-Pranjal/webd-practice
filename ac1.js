@@ -206,17 +206,68 @@ for (const i in obj) {
         const element = obj[i];
         console.log(i,element)   //object[key]=value
         
-    }
+}
+// for using the js strign template we ahve to use use the ` ${variable name }`
+// it is same as the fstring that we use in pytho =n
+// let myname="prabaj"
+// console.log(`${myname}`)
 
 
 
+// function in JS 
+// they are used for code reusabaltiy in the prgram 
+function letter(name,_class,rollno){
+    console.log(`hello friend, my name is ${name} and i m studying in class ${_class} and my roll no is ${rollno}`)
+}
+// function calling 
+// fullname=prompt("enter the name :")  //we can take the input using the propmt 
+letter("sanjay","12",20311502721)
+letter("hardik",12,20511502721)
 
 
+// we can also store the value and use that later on or pass the same value to the another function 
+function increase(num){
+    return num +10;
+}
+
+function Square(num){
+    console.log(num**2)
+}
+
+let number=increase(5)
+console.log(number)
+Square(number)
 
 
+// so use the string template by using the `${variable name}`
+
+// Arrow function 
+// we use the arrow function in order to name the funcion as the variable name 
+const func1=(parameter1)=>{
+    console.log("hello i m a arrow function ",parameter1)
+}
+
+// to use the arrow function we can use the fucntion name inside the vairbale so the fucntion can be used as the variable name 
+func1(100)
+
+const sum=(a,b,c)=>{
+    return a+b+c;
+}
+
+let result=sum(10,20,30)
+console.log(result)
 
 
+// use the arrow funciton :- itis basically used for making the funciton as the variable name 
+// simple concept 
+// for using the string literal template use the `` and the ${variable name }
+const myfunction=(bloodgrp,phone,city,country)=>{
+    console.log(`my city is ${city} in ${country} with the blood grp of ${bloodgrp}`)
+}
+// in this way we can use the arrow function with the string template 
+myfunction("B+",88946515,"delhi","india")
 
+//  so making const functionname=(parmaenter)=>{code}
 
 
 
