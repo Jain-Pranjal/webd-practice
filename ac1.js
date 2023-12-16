@@ -223,6 +223,8 @@ function letter(name,_class,rollno){
 // fullname=prompt("enter the name :")  //we can take the input using the propmt 
 letter("sanjay","12",20311502721)
 letter("hardik",12,20511502721)
+// letter(fullname,12,20511502721)
+// `${name}`
 
 
 // we can also store the value and use that later on or pass the same value to the another function 
@@ -269,14 +271,36 @@ myfunction("B+",88946515,"delhi","india")
 
 //  so making const functionname=(parmaenter)=>{code}
 
+// faulty calc
+random=Math.random()
+console.log(random)
+if (random<0.1){
+    console.log("wrrong operation ")
+}
+// use the if else 
+// try not to use the eval 
+// math.random generate the random from 0 to 1
 
 
+// strings
+// so use the literal template we use the 
+// console.log(`${variable name}`)
 
 
+// all these operation are not going to change the original string they just make a another string and if we want the string to change then we have to store it back to it 
+
+let friend="                 shreyaaa is a grill"
+// use the slice operation to slice the string 
+console.log(friend.slice(1,5))  //it will slice the string 
+console.log(friend.replace("grill","boy"))  //replace of the string
+console.log(friend)
+console.log(friend.trim())
 
 
+// in this we do the slcing of the string by using the slice function 
+// console.log(friend.slice(5,10))
 
-
+// original string will remain the same as they are immutable in nature 
 
 
 
