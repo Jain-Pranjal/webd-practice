@@ -65,7 +65,8 @@ function year(){
     let saal=50;
     console.log(saal)
 }
-year()
+year();
+saal=100  //reuodae is allowed 
 console.log(saal)  
 
 
@@ -144,15 +145,68 @@ for (const key in object) {
 console.log(object["name"])
 
 
+// let home=prompt("enter the house numner ")
+// if (home<100){
+//     console.log("u r not elligible ")
+
+// }else{
+//     console.log("good luck")
+// }
 
 
+// we can add another object inside a object 
+let o={
+    "name":"pranjl",
+    "age":5,
+    "is_folllow":true,
+    "mynew":{
+        "fname":"sachin",
+        "lname":"aggarwal"
+    }
+}
+// console.log(o)
+o["love"]=true;
+// console.log(o)
+o["name"]="shreya"
+console.log(o)
+
+// === checks the value as wellas the datatype of the varibale 
+// == only check the value 
+// so to check the value as well as the datatype use the === mostly used 
+
+// loops 
+// in the js we have various types of the loop 
+
+// we can iterate this in the array aslo
+// array in th JS can have the multiple datatype as JS is a loosely typed language  so the array in the js can have the multiple datatype in it 
+
+console.log("\nusing for loop")
+let myarr=["pranjal",665,true,52.55]
+for(let i=0;i<myarr.length;i++){
+    console.log(myarr[i])
+}
+console.log("\nusing the while loop")
+let i=0
+while(i<myarr.length){
+    console.log(myarr[i])
+    i++
+}
+
+// for of loop is used for iterating object like the array or strings means those which can be iteratble in nature 
+console.log("\nusing the forof loop")
+for (const iterator of myarr) {
+    console.log(iterator)
+}
 
 
-
-
-
-
-
+console.log("\nusing the forin loop")
+// forin loop is used for traversing the keys of th eobject 
+// for in loop is used to print the keys and the values inside the object 
+for (const i in obj) {
+        const element = obj[i];
+        console.log(i,element)   //object[key]=value
+        
+    }
 
 
 
