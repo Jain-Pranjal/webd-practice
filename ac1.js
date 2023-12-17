@@ -357,16 +357,50 @@ console.log(adjective[randomnum()]+" "+shop[randomnum()] + " "+ last[randomnum()
 
 // and if the number random is ranging from the 0 then increase the 1 
 
+// DOM manipulation 
+// 
+// all the elelments will be in the tree like strucutre which can be chanegs by using the DOM manipulatuon 
+// doucment object model is basically used to map the entire html as the document tree 
+// means we are making the tree like strucutre of all the tags and elements using the DOM so we can 
+
+// widnow is the main global object that is a global object and inside it wr have the document 
+
+// nodes contain both the comment nodes as well as the text node 
+console.log(document.body.firstChild)  //firstchild also takes the nodes such as the text or the comment 
+console.log(document.firstElementChild)  // it will give only the element first of the html
+
+// the querselector will select only the first class witht the matching one 
+// for selectong all the elements with the same class we need to use the wueryselectorall in the for each loop
+// use the arrow function with the queryselector in order to select all the boxes of the same class
+
+// document.querySelectorAll(".box").forEach(e=>{
+//     console.log(e)
+// })
 
 
 
 
+// in this way a arrow function work 
+// normal arrow function :- we use the arrow funciton in order to store the funcion inside the variabel name 
+// const minus=(a,b)=>{
+//     return a-b
+// }
+// let diff=minus(3,1)
+// console.log(diff)
 
+// the first child or the last child includes the nodes also suchas the comment or text node 
+// whereas if we write the firstelement or lastelement hen it will only give the element to us i.e. only the elements of the html
 
+// for the parent we can use the 
+let cont=(document.body.firstElementChild)
 
+// to find the elemenet sibling we can use the previous element sibling 
+console.log("previous sibling is of box 2: -",cont.children[1].previousElementSibling)
+console.log("next sibling is of box 2: -",cont.children[1].nextElementSibling)
 
-
-
+// to find the content from the table 
+console.log(document.body.children[2].rows[0].cells[0].innerHTML )
+console.log(document.body.querySelector("table").children[0].children[2].children[0].innerHTML="jain sahab" )  //jist going inside the tree
 
 
 
