@@ -433,6 +433,156 @@ console.log("it will match the css id or any selector : ",cont.children[2].match
 // the main thing in this we had learnt that "document.querySelector(".box")" will select only the first box which matches the class name with it 
 // if we want to select all the boxes having the same class then we have to use the "document.querySelectorAll(".box")" with the for loop to iterate all the elements of the container 
 
+// ARRAYS
+//to store multiple elements imside a single name we use the array 
+// in JS we can store multple datatype inside the array as js is a losseley typed language so it will store multiple vallues of multiple datatype 
+// os to convert the array into string we can use the tostring 
+
+
+let array=["pranjal",false,true,54.21,4,"school","home"]
+console.log(array)
+console.log(array.length)
+
+// arrays are mutable in nature we can change the array 
+array[0]="khanna"
+console.log(array)
+
+
+// array methods 
+console.log(array.toString())  //converts the array into the string separated by commas 
+console.log(array.slice(1,4))  //sliing of the array 
+
+// there are 4 methods for insertion and deletion of eleements in the array 
+// push and pop :- at the end of the array 
+// shift and unshift  :- from the starting of the array 
+
+console.log(array.push("last"))
+console.log(array)
+console.log(array.pop())  //it will remove the element from last 
+console.log(array)
+
+console.log(array.unshift("first"))  //adding the new element in the start 
+console.log(array)
+console.log(array.shift())  //removing the new element in the start 
+console.log(array)
+
+console.log(array.join(" & "))
+
+// push and pop works on last 
+// unshift and shift works on first 
+
+console.log(delete(array[2]))
+console.log(array)
+// so delete basicall remove the element from the array but its space will be remain there
+// memory is allocattess
+
+// so for concating the array we can use the concat functionn
+// AFTER THE CONCATINATION IT DOES NOT CHANGE THE ORGINAL ARRAY 
+
+
+// we can aslo sort the array and this will do the changes in the ORIGINAL ARRAY ALSO 
+// array.sort()
+
+// so splice is basically used for removing elemts from a position and kitne hatana hai 
+console.log(array.splice(1,2,"love","cute"))
+console.log(array)
+
+// splice takes the parameter (from what positioon to delete , how many delete , what are the items to be inserted to that deleted position )
+// so splice basically change the actual array 
+
+
+// LOOPS IN ARRAY 
+// in c++ we also had learned that for traversing the array foreach loop is best for it 
+
+// for each loop in array 
+array.forEach(element => {
+    console.log(element)
+});
+console.log("\n")
+
+
+// we can also use the forof loop for traversing in array 
+for (const iterator of array) {
+    console.log(iterator)
+}
+
+
+// map filter and reduce 
+let simple_arr=[1,2,3,4,5,6,7,8,9,10]
+let sq_arr=[]
+// for (let i = 0; i < simple_arr.length; i++) {
+//     const element = simple_arr[i];
+    // sq_arr.push(element**2)   //in this we are pushing the elements inside a new array 
+// }
+
+// easy way of doing this 
+// let sq_arr=simple_arr.map(e=>{
+//     return e**2
+// })
+
+// console.log(sq_arr)
+
+
+// filter :- it will make the array based on certain condition 
+const greaterthan7=(e)=>{  //arrow function of making the function as trhe vacriable name 
+    if(e>7){
+        return true
+    }else{
+
+        return false
+    }
+}
+
+console.log(simple_arr.filter(greaterthan7))
+// console.log(sq_arr)
+
+// so basiaclly we are making a array out of a used aray using some filter condition in that 
+let new_arr2=[]
+let new_arr=[5465,4684,8,48,651,1,31,56,46,48,4,51,5,13,13,1,5,84,864,84,65,13,132,3,0,1,564,84,8,4]
+// now i have to make a array using this by satisfying some condition in it 
+const greaterthan100=(e)=>{
+    if(e>100){
+        return true
+    }else{
+        return false
+    }
+}
+// i have to apply the filter on the original array 
+console.log(new_arr.filter(greaterthan100));
+
+// thats why when we need to make a new array from a older one then we can use the filetr property which will make after true of th ecertain conditiom
+
+
+// const cubic=(a,b)==>{
+//     return a*b;
+// }
+
+// reduce 
+// console.log(new_arr.reduce(cubic))
+
+
+// array.from 
+console.log(Array.from("harry"))
+// we can use the array.from to make the array from any object 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
