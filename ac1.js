@@ -192,6 +192,10 @@ while(i<myarr.length){
     i++
 }
 
+/**
+ 
+
+
 // for of loop is used for iterating object like the array or strings means those which can be iteratble in nature 
 console.log("\nusing the forof loop")
 for (const iterator of myarr) {
@@ -203,9 +207,9 @@ console.log("\nusing the forin loop")
 // forin loop is used for traversing the keys of th eobject 
 // for in loop is used to print the keys and the values inside the object 
 for (const i in obj) {
-        const element = obj[i];
-        console.log(i,element)   //object[key]=value
-        
+    const element = obj[i];
+    console.log(i,element)   //object[key]=value
+    
 }
 // for using the js strign template we ahve to use use the ` ${variable name }`
 // it is same as the fstring that we use in pytho =n
@@ -240,6 +244,7 @@ let number=increase(5)
 console.log(number)
 Square(number)
 
+*/
 
 // so use the string template by using the `${variable name}`
 
@@ -291,16 +296,94 @@ if (random<0.1){
 
 let friend="                 shreyaaa is a grill"
 // use the slice operation to slice the string 
-console.log(friend.slice(1,5))  //it will slice the string 
-console.log(friend.replace("grill","boy"))  //replace of the string
-console.log(friend)
-console.log(friend.trim())
+// console.log(friend.slice(1,5))  //it will slice the string 
+// console.log(friend.replace("grill","boy"))  //replace of the string
+// console.log(friend)
+// console.log(friend.trim())
 
 
 // in this we do the slcing of the string by using the slice function 
 // console.log(friend.slice(5,10))
 
 // original string will remain the same as they are immutable in nature 
+
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+/**
+ * Returns a random integer between min (inclusive) and max (inclusive).
+ * The value is no lower than min (or the next integer greater than min
+ * if min isn't an integer) and no greater than max (or the next integer
+ * lower than max if max isn't an integer).
+ * Using Math.round() will give you a non-uniform distribution!
+ */
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// in the js we can us ehte random number bw the 0 and 1 only vo  bhi in lfoat 
+
+
+// business name generator 
+let adjective=["crazy","amazing","fire"];
+let shop=["engine","food","garment"];
+let last=["bros","limited","hub"];
+// let companyname=adjective[]
+// making it mire random by using the the random in all thiggs 
+// let rand1=getRandomInt(0,2)
+// let rand2=getRandomInt(0,2)
+// let rand3=getRandomInt(0,2)
+// console.log(rand1,rand2,rand3)
+// console.log(adjective[rand1]+" "+shop[rand2] + " "+ last[rand3])
+
+let ran1=Math.floor(Math.random()*3)+1;
+console.log(ran1)
+
+// as we know that mah. rnadom generate a random number from 0 to 1 0 include and 1 not inlcdued(0.999)
+// so if we multipley the number then it range will be incrrese to it by that number 
+
+
+
+// we are generating a rnadom numbe form the range of 0 1 2 which willbe used as the index iside the array 
+function randomnum(){
+    rand=Math.floor(Math.random()*3)  //it will never go to 3 so floor value will be 0 1 2
+    // console.log(rand)
+    return rand;
+}
+console.log(adjective[randomnum()]+" "+shop[randomnum()] + " "+ last[randomnum()])
+
+// and if the number random is ranging from the 0 then increase the 1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
