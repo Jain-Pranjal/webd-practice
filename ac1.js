@@ -402,15 +402,36 @@ console.log("next sibling is of box 2: -",cont.children[1].nextElementSibling)
 console.log(document.body.children[2].rows[0].cells[0].innerHTML )
 console.log(document.body.querySelector("table").children[0].children[2].children[0].innerHTML="jain sahab" )  //jist going inside the tree
 
+// there are vaeious methods for the selelction insiede the DOM
+document.getElementById("myid").style.color="purple"
 
 
+// the queryselector will select the clss of the first elemetn only 
+// if we want to access alal the elements of the class then we have to use th eforeach loop 
+
+document.querySelector(".box").style.color="red"
+// it will select only the first element of the matched class 
+
+// the queryseletotrall will give all the elements in the html collection which need to be iterate by the loop
+document.querySelectorAll(".box").forEach(e=>{    //by using the arrow fucn
+    e.style.color="blue"
+})
+
+// let items=document.querySelectorAll(".box")
+// for (let i = 0; i < items.length; i++) {
+//     const element = items[i];
+//     console.log(items)
+// }
 
 
+// so th queryselectorall gives the nodelist that we need to iterate it so that we can change the properties of it 
 
+// mathces clossest and contains methods 
+// use the matches to match the css selector 
+console.log("it will match the css id or any selector : ",cont.children[2].matches("#myid"))
 
-
-
-
+// the main thing in this we had learnt that "document.querySelector(".box")" will select only the first box which matches the class name with it 
+// if we want to select all the boxes having the same class then we have to use the "document.querySelectorAll(".box")" with the for loop to iterate all the elements of the container 
 
 
 
