@@ -3,5 +3,5 @@ table,tr,th,td{
     border-collapse: collapse;
 }
 .box{
-    background-color: lightgreen;
+    background-color: rgb(144, 238, 144);
 }

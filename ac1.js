@@ -565,25 +565,93 @@ console.log(new_arr.filter(greaterthan100));
 console.log(Array.from("harry"))
 // we can use the array.from to make the array from any object 
 
+// factorial 
+let fact=1
+// let num=prompt("enter the number : ")
+num=5;
+for(let i =num;i>0;i--){
+    // fact=fact*i
+    fact*=i
+}
+console.log(fact)
+
+
+// generating a array 
+let sample=5;
+ar=Array.from(Array(sample).keys())
+console.log(ar)
+// making an array from the number 
+// ar=Array.from(Array(sample).keys())
+
+
+// Array.from //this from is used to make th array from the value given into it 
+// we have given Array(number).keys()  //this keys function is an iterable object that will iterate to every value of the number to make the array
+
+
+// to make the array we use the array.from and inside we pass the array(any number to which we make the array).keys 
+// so we can make the array by using the shortcut like  we want the array from a range of number 
+let Numbers=5
+Array.from(Array(Numbers).keys())
+// so we can make the array by this shortcut trick 
+// we can make the array from the "from" keyword 
+console.log(Array.from(Array(520).keys()))
+
+let color=["red","orange","blue","yellow","green"]
+let backcolor=["red","orange","blue","yellow","green"]
+
+rand_color=Math.floor(Math.random()*5)
+rand_backcolor=Math.floor(Math.random()*5)
+
+console.log(rand_backcolor)
+console.log(rand_color)
+document.querySelectorAll(".box").forEach(e=>{
+    e.style.backgroundColor=backcolor[rand_backcolor];
+    e.style.backgroundColor=`rgb(222,62,45)`
+    e.style.color=color[rand_color]
+})
+
+// or we can select the value of the color from the color codign
+// let R=Math.floor(Math.random()*256)
+// let G=Math.floor(Math.random()*256)
+// let B=Math.floor(Math.random()*256)
+// console.log(R,G,B)
+// document.querySelectorAll(".box").forEach(e=>{
+//     e.style.backgroundColor=rgb(R,G,B);
+//     e.style.color=rgb(R,G,B);
+// })
+// rgb(144, 238, 144)
+
+// taking the random number from the math module and from a given range 
+
+
+// some things about using the random in JS 
+// in js the math,ramdom basicalyy produces a value from 0 to 1 (not include ) so if we wnat that to generate the random number then multiply it by that specific number so that we can get the range 
 
 
 
+let Random=Math.ceil(Math.random()*10)   //so basically it will give the value bw 0 and 1 
+console.log(Random)  
+// so it will always be less than 10 as it is not included in 10 so we can also use the math function floor and ceil 
+// floor round off to low and ceil round of to upper 
+// and if we wnat ke value upar jaye so at last we can add the number 
+
+// in this way we ca generate the random number from the random module 
 
 
 
+// we can make the array by using the from and iterate them 
+let q=(Array.from(Array(5).keys()))
+// by using the from we can create a array from it 
+console.log(q)
+// for iterate the array we can use the traditional for loop or foreach loop with the arroe function 
+q.forEach(e=>{
+    console.log(e)
+}) // so byv using this we can make the iterateion in the array by usign the foreach loop 
 
 
-
-
-
-
-
-
-
-
-
-
-
+// Array.from(Array(5).keys()+1).forEach(e=>{
+//     console.log(e)
+// })
 
 
 
