@@ -5,3 +5,14 @@ table,tr,th,td{
 .box{
     background-color: rgb(144, 238, 144);
 }
+
+
+/* after making the dynamic element by js and setting the attribute by using the setAttribute we can also give the class naem and do the styling  */
+.orangeLink{
+    color: orange;
+}
+
+.bg-lightBlue{
+    /* background-color: lightblue; */
+    background-color: aqua;
+}

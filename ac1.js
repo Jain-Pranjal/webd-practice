@@ -654,6 +654,119 @@ q.forEach(e=>{
 // })
 
 
+// inserting and removing elements from the dom 
+// the outerhtml includes the full html inside it + the element itelsf also 
+
+
+// hasattributes will check wheter the given have the foloowing attribuyte or not 
+console.log(document.body.querySelector(".link").hasAttribute("href"))
+// hasattrbiute bascially check whether we have that attribute or not 
+
+// get attriebute to get the value of the attribute 
+console.log(document.body.querySelector(".link").getAttribute("href"))
+
+// setatrribute is used to set the value of the attribute 
+console.log(document.body.querySelector(".link").setAttribute("href","###"))  //it will set the new value of the attirbuye
+console.log(document.body.querySelector(".link").getAttribute("href"))
+
+
+// to get all the atrribiutes we can use the .attributes 
+console.log(document.body.querySelector(".link").attributes)
+
+// to set the attribiutes use the set attribiutes 
+
+// wec an also store the info in the data attribute 
+// by using the dataset we get all the data attributes
+console.log(document.body.querySelector(".link").dataset)
+
+
+
+// insertion methods in the js 
+// we can dynamiclyy add the element in the js 
+// working with the attributes 
+// we can add set and shiw the attributes
+
+// lets make a element 
+// to make the element we just write the name of the element in the create element 
+let mylink=document.createElement("a")
+mylink.setAttribute("href","https://www.google.com")
+mylink.setAttribute("target","_blank")
+mylink.setAttribute("class","orangeLink")
+mylink.innerHTML="this is the <b>inserted link</b>"
+// document.body.insertAdjacentElement(mylink)
+// document.body.after(mylink)
+// document.body.before(mylink)
+document.body.append(mylink)
+// document.body.prepend(mylink)
+
+// using the append we can insert the element at the end 
+// we can insert the element before afer append or prepend 
+
+// append measn ke sabse end me 
+// after means ke us element ke baad 
+
+// if we can insert the html we can use the insertAdjacentHTML
+
+// we can make the elemnt just by previous method and make the inner html and place it at the position 
+let mypara=document.createElement("p")
+mypara.innerHTML="this is the paragraph <i>jain</i>";
+mypara.setAttribute("class","redpara")
+document.body.querySelector(".container").after(mypara)
+
+
+// so to make th eelement there is need to  use the document.createelemtn 
+// we can aslo use the inser html 
+let mycont=document.body.querySelector(".container")
+mycont.insertAdjacentHTML("afterend","<b>this is pranjal</b>")  //adding the html 
+mycont.insertAdjacentElement("beforebegin",mylink)  //adding the element 
+// so we can insert the html like this 
+
+
+// we can also get the class name and the class list 
+console.log(document.body.querySelector(".container").classList)  //here we can get all the class list   // it will give the list 
+console.log(document.body.querySelector(".container").className)  //here we can get all the class names    //it will give the name
+
+// we can also add or remove thr class from the list 
+console.log(document.body.querySelector(".container").classList.add("new_class"))   //adding the new class in the list 
+console.log(document.body.querySelector(".container").classList)  
+
+
+console.log(document.body.querySelector(".container").classList.toggle("bg-lightBlue"))  
+// so we can toggle the class inside the element on or off
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
