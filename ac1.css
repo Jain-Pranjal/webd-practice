@@ -16,3 +16,33 @@ table,tr,th,td{
     /* background-color: lightblue; */
     background-color: aqua;
 }
+#btn{
+    padding: 14px;
+    font-size: 15px;
+    cursor: pointer;;
+}
+
+.bigbox{
+    width: 80vw;
+    height: 45vh;
+    background-color: red;
+    padding: 14px;
+    cursor: pointer;
+    margin: 14px;
+}
+.parent{
+    background-color: yellow;
+    padding: 14px;
+    margin: 14px;
+    cursor: pointer;
+    
+}
+.child{
+    padding: 14px;
+    margin: 14px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+
