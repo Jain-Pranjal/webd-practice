@@ -95,9 +95,19 @@ setTimeout(() => {
 
 }, 3000);
 
+// callback function is a function that runs inside a anoher function 
 
+// so in JS we have the Asynchronous actions that means those will be executed later in the script 
+// settimeout is an achronous action that means it will be executed later on in the script as it is a async action 
 
+const callback=(arg)=>{
 
+}
+const loadScript=(src,callback) => {
+  let sc=document.createElement("script")
+  sc.src=src;
+  sc.onload=callback("harry")
+}
 
 
 
