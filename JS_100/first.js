@@ -124,26 +124,114 @@ let num1=50;let num2=10;
    
 // }
 
+// prohram to add natural nummber
+// let num=Number.parseInt(prompt("Enter number  : "))
+// let sum=0
+// for (let i =0;i<=num;i++){
+//     sum+=i
+//     // sum=sum+i
+// }
+// console.log(sum)
+
+// for arrays i would liketo use the for each loop as in c++ we use the for each loop for the same 
+
+let arr=[2425,5,486,"pranjal"]
+// arr.forEach(element => {
+//     console.log(element)
+// });
+
+// for (const iterator of arr) {
+//         console.log(iterator)
+    
+// }
+
+// so we can use the for of or for each loop for iterating inside the array 
+
+// for of loop is used for the iteratble object but object is not iterable as it has 2 things in it keys and values 
+// for (const iterator of obj) {
+//     console.log(iterator)
+// }
+// obj is not iterable
+// so for iterating the object and the its key and values we need to use the forin loop
+
+// in this way we can iterate the object keys and value using the forin loop 
+for (const keys in obj) {
+        const value = obj[keys];
+        console.log(keys," ",value)
+}
+
+// forof loop is basically used for array or iterable object such as string 
+// ehike loop
+// let j=0;
+// while(j<5){
+//     console.log(j)
+//     j++
+// }
+
+// funtion 
+function average(x,y){
+    return (x+y)/2
+}
+let avg=average(4,5)
+console.log(avg)
 
 
 
+// also we can create a arrow function 
+// arrow function means we are making a function just like the variable name 
+// the arrow function is used when we want to write the function in the form of the variable name and for that we use the arrow function 
+// it simply takes the parameter in it and we will use the  let or const just like the function name to be declared 
+
+// const functionion=(parameter)=>{
+    // this is the arrow function
+// }
+
+const multiply=(a,b)=>{
+    return (a*b)
+}
+let mul=multiply(10,2)
+console.log(mul)
+
+// const func1=(paramert)=>{
+//     finction body 
+// }
+
+// cosnt arrow=(param)=>{
+//     function code 
+// }
 
 
+const marks={
+    "pj":52,
+    "dfgdg":552,
+    "f":5211
+}
+// by for loop 
+for(let i =0;i<Object.keys(marks).length;i++){
+    // console.log(Object.keys(marks)[i])
+    console.log(marks[Object.keys(marks)[i]])
+}
+
+// for (const key in marks) {
+//     console.log(marks[key])
+// }
 
 
+console.log(Object.keys(marks))  //it will give in the array form 
 
+// while(true){
+//     number=Number.parseInt(prompt("enter : "))
+//     console.log("try again")
+//     if(number===5){
+//         break
+//     }
+// }
+// always try to make the arrow function for the functioning
+const mean=(x,y,z,q,r)=>{
+    console.log((x+y+z+q+r)/5)
+}
 
-
-
-
-
-
-
-
-
-
-
-
+mean(1,2,3,4,5)
 
 
 
