@@ -176,7 +176,6 @@ let avg=average(4,5)
 console.log(avg)
 
 
-
 // also we can create a arrow function 
 // arrow function means we are making a function just like the variable name 
 // the arrow function is used when we want to write the function in the form of the variable name and for that we use the arrow function 
@@ -216,7 +215,6 @@ for(let i =0;i<Object.keys(marks).length;i++){
 //     console.log(marks[key])
 // }
 
-
 console.log(Object.keys(marks))  //it will give in the array form 
 
 // while(true){
@@ -228,10 +226,37 @@ console.log(Object.keys(marks))  //it will give in the array form
 // }
 // always try to make the arrow function for the functioning
 const mean=(x,y,z,q,r)=>{
-    console.log((x+y+z+q+r)/5)
+    result =((x+y+z+q+r)/5)
+    // using the template literal the same way we use the fstring in python 
+    console.log(`the value of x is ${x} and mean is ${result}`)
 }
-
 mean(1,2,3,4,5)
+// strings are immutable in nature 
+// we cannit change the value of the string using index value 
+
+// moerover the methods used in the string make a new string , not update the original string 
+let myname="pranjal"
+myname[0]="l" //cannot change the string once it is declareed
+console.log(myname)
+console.log(myname.slice(1,5));
+// console.log(myname.split("n"));
+console.log(myname.replace("l","z"));
+console.log(myname); //original string does not change anytime it wilk be intact as it is 
+
+// trim basically eliminates the white spaces and the trailing space it has 
+console.log(myname.trim());
+console.log(`hi "${myname}"`);
+
+let amt="i have rupees 1000"
+console.log("i have rupees ".length)
+console.log(amt.slice(14));
+
+
+
+
+
+
+
 
 
 
