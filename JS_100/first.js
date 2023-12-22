@@ -528,39 +528,30 @@ let new_arr=odd_arr.filter(d=>{
 })
 console.log(new_arr);
 
+// PRACTISE QUESTION 
+// Q!
+let user_arr=[]
+while (true){
+    let num=(prompt("enter the number "))
+    if(num=="q"){
+        break
+    }
+    user_arr.push(Number.parseInt(num))
+}
+console.log(user_arr);
 
+// Q3
+// filter the numbers
+divby10=[]
+// user_arr=[10,21,20,30,51,50]
+divby10=user_arr.filter(e=>{
+    return e%10==0
+})
+console.log(divby10);
 
+// this will take the input from the user and then produce the array by filtering the values div by 10 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// map and filter makes the new array out of the old one by perfoming some function on it 
 
 
 
