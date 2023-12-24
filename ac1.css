@@ -65,3 +65,38 @@ table,tr,th,td{
     font-weight: 700;
     font-size: larger;
 }
+.sup-but{
+    background-color: black;
+    color: white;
+    width: 155px;
+    height: 55px;
+    border: 2px solid red;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.trial{
+    background-color: black;
+    color: white;
+    font-family: cursive;
+    font-size: 23px;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

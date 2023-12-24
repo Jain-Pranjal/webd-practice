@@ -179,10 +179,105 @@ console.log(myele.className);
 // to remove the classes remove it from the classlist 
 // so we can add or remove ir toggle the class using the class list 
 
+// settimeout and settimeinterval 
+// document.body.querySelector(".sup-but").addEventListener("click",(e)=>{
+//     alert("u have click")
+//     e.stopPropagation()
+// })
+
+// so settime out bascially do one time only 
+// setinterval will do the same thing again and agaikn usikng the time interval 
+// setInterval(() => {
+//     alert("hola maigo")
+// }, 2000);
+
+// doing only one time is settime out 
+
+// if we want to stop the timeout we can use the cleartiemout 
+let time=setTimeout(() => {
+    alert("sffsvs")
+}, 3000);
+console.log(time);
+
+// so we have provided the id to stop the time out then it will stip the execution 
+clearTimeout(time)
+ //we have to provide the timeout id
+
+// interurn of the settimeout and settimeinterval we get the timerid in return to whoch we can cancel the timeout function also 
 
 
+// so bsucally we can give th eargument to the functuin 
+const sum=(a,b,c)=>{
+    console.log("the sum is ",a+b+c);
+}
+
+setTimeout(() => {
+    sum(4,5,6)
+}, 3000);
+
+// setTimeout(sum,3000,3,4,5)
+// so in both ways we can execute the fucntion in the given interval of time 
 
 
+// use the setinterval and settimeout for checking when to take the action 
+
+// also if we want to add or remove the class or to togglee the class then use the class list 
+const diff=()=>{
+    let a=prompt("enter the 1st num : ")
+    let b=prompt("enter the 2nd num : ")
+    console.log("the diff is : ",a-b);
+}
+// so basically we can pass the function in the settimeout to perform some action 
+// setTimeout(() => {
+//     user()
+// }, 2000);
+// let timer=setInterval(() => {
+//     diff()
+// }, 2000);
+// clearTimeout(timer)
+// to stope the execution we need to take the same timer id and stop it 
+
+//for stopping the timeoujt use th clear time out  
+
+// therefore we can geenrate the settimeout and interval 
+
+
+// browswer evenets 
+// adding the js evenet handler >> more priority than the adding in line 
+
+// inserting elemetns is used when we dont want to reload the webpages at all 
+
+let element=document.createElement("div")
+element.innerHTML="<b>wow hemlooo sabhi ko </b>"
+element.setAttribute("style","color:black")
+element.setAttribute("style","background-color:pink")
+// element.setAttribute("style","border:2px solid red")
+document.body.querySelector(".container").insertAdjacentElement("afterend",element)
+document.body.querySelector(".container").insertAdjacentHTML("afterend","<u>Balle balle</u>")  // by this we inserted the html not the elememnt 
+// html means text witht the tag already in it 
+element.classList="class1 trial"  //adding the class in the list 
+// so u can insert the element by using this technique
+
+// for aacesing the custom attribute we can use the dataset 
+
+let but=document.body.querySelector(".sup-but")
+but.addEventListener("click",(e)=>{
+    console.log(e.clientX);
+    
+    let sq=prompt("enter the number : ")
+    console.log(`the square of the ${sq} is : ${sq*sq}`);
+    document.querySelector(".btn-para").innerHTML="hi this is changed by using the <b>Event Handling </b>"
+})
+// by this we can do interactivity 
+
+// use the keyup for the keyborad input for the interactivinty 
+
+// the event listenner has 2nd argument with it which is the event object 
+// document.body.getElementsByClassName("sup-but")
+
+// moreover the event tkes the argument as the event object in it which can be used for stopping the event propagation into the parent one 
+
+// the eveent object basically prints what has happend in the event 
 
 
 
