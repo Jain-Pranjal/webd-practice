@@ -110,35 +110,74 @@ do {
 // location.href will redirwct to the anpther webpage 
 
 // walking the dome 
-document.querySelector(".container").childNodes.forEach(e=>{
-    console.log(e)
-  })
+// document.querySelector(".container").childNodes.forEach(e=>{
+//     console.log(e)
+//   })
 //   this will give all the childnodes by traversing it 
 
 // table basesd navigation 
 
-let t=document.body.children[2]
+// let t=document.body.children[2]
 
 // chapter 7 ps
+// we need to apply the array methods for using the loop in the array 
+
+let joke=["prnajl","shreua","aalu"]
+let rand=Math.floor(Math.random()*joke.length)
+console.log(joke[rand]);
+// console.log(rand);
+
+// we can use the console.dir to print the elemetn 
+// the main diff will be that it will show the element as the object not the element 
+
+// the outer html will also give the outer one as well as the inner part of thr html also but the inner one will only gove the inner one 
+
+// console.dir will print the element as an object with all of the propoerties of it 
+// console.log will give the only ditrecctly give the element 
+
+// ot get the text of the website we can do as :-
+console.log(document.body.querySelector(".container").textContent);
+// by this we get all the text of the webste 
 
 
 
+// // we can make any eleemtn insode the html and aslo set their attribute 
+// let ele=document.createElement("div")
+// ele.setAttribute=("class","insert_ele")
+// // ele.setAttribute("style","backgroundColor:red")
+// ele.setAttribute("hidden","false")
+// // ele.setAttribute("href","insert_ele")
+// ele.innerHTML="hi this is inserted element"
+// // document.body.append(ele)
+
+// we can also insert the element using the adjeactn property
+// document.body.querySelector(".container").insertAdjacentElement("afterbegin",ele)
+let ele=document.body.querySelector(".insertion")
+let insert=document.createElement("div")
+insert.innerHTML="<b>Hola amigo !!!!</b>"
+insert.setAttribute("class","another anotherone")
+console.log(insert.classList);
+
+// ele.prepend(insert)
+ele.insertAdjacentElement("beforeend",insert)
+// so we need to add the eleemnt not the htnml as we have predfined th ehtml earlier so we need to insert the elememnt 
 
 
+// to remove the node use the rmeove function 
+// document.body.remove
 
 
+let myele=document.body.querySelector(".insertion").children[0] 
 
+// for adding the class insode the element we can write it into the className attribute 
+// aslso remeber that for the custolmattribute use the data-* method 
 
+console.log(myele.className);
 
+// so fir adding the classinside the element use the classname function of the document 
 
-
-
-
-
-
-
-
-
+// to remove the classes remove it from the classlist 
+// so we can add or remove ir toggle the class using the class list 
 
 
 

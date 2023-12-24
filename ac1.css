@@ -44,5 +44,24 @@ table,tr,th,td{
     color: white;
     cursor: pointer;
 }
+.insert_ele{
+    background-color: purple;
+    padding: 14px;
+    margin: 14px;
+    color: white;
+}
 
 
+.insertion{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: darkkhaki;
+    height: 75px;
+}
+
+.another{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: larger;
+}
