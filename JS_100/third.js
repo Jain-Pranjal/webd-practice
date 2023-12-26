@@ -81,8 +81,29 @@ now what await do it will wait for the fucntion to complete first and then i wil
 if we dont put the await then it will process the next instruction and will keep waiting in the background but it will not stoo the execution of the program 
  */
 
+document.body.querySelector(".wow-but").addEventListener("click",(e)=>{
+    console.log(e);
+})
+
+// the e is the event object and with that we can perform many operation like stop the propagation of the event of the parent 
+
+// so addng a event listener to provide the interactivity is as follows:- 
+document.body.querySelector(".wow-but").addEventListener("dblclick",(e)=>{
+    alert("this is double click ")
+})
+// we will try to use the maximum evet listenir
 
 
+const sum=(a,b)=>{
+    console.log("the sum is :" , a+b);
+    
+}
+document.body.querySelector(".wow-but").addEventListener("click",(e)=>{
+    // console.log(e.keyCode,e.key);  
+    let n1=Number.parseInt(prompt("enter the 1 : "))
+    let n2=Number.parseInt(prompt("enter the 2 : "))
+    sum(n1,n2)
+})
 
 
 
