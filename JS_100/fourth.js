@@ -132,11 +132,7 @@ finally{
 // object bascially are the real workd enetites 
 // class os the blue print and oject is the instance of the class 
 
-let obj={
-    name:"pranjal",
-    class:12
-}
-console.log(obj);
+
 // prototype are the additional property of the object  such as we can inheritence the prototype 
 
 // let animal={
@@ -204,16 +200,78 @@ let lion=new jungle("Raju")
 // as we know that object are the instance of a class so we can also check by using the fucntion isinstanceof
 
 
+// ADvanced Concepts of JS
+//now this funciton will be entertained after the whole script will execute as it is an async func
+async function sleep(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(45)  //on resolve it will give the value of 45 
+        }, 1000);
+    })
+}
+
+// this function  after resolving will return the value to it 
+
+// now as we know hrat we need to use the async fucntion to use the await inside that 
+// but it is tiring to make and call the fucntion sok we need a immediate fucntion that will revoke itself 
+
+(async function main(){
+    let a=await sleep()
+    console.log(a);
+    let b=await sleep()
+    console.log(b);
+})()
+
+// this is the IIFE immediately invoked function expression
+
+// remeber that the await is used inside the await so why need to make the another funcion and then invoke it again 
+// this can be done by IIFE which tells that making of the async function and then invoking it again will done 
 
 
+// in this way we have destrcuture the array 
+let [a,b,...rest]=[55,66,77,88,99]
+console.log(a,b,rest);
+// for the remaining use the ...variable_name
+
+// simillarly w can do the destrucuturing in th object also 
+
+let obj={
+    name:"pranjal",
+    classs:12,
+    phone:9868176069,
+    age:55,
+    blood:"B+",
+    city:"delhi",
+    country:"india"
+
+}
+// console.log(obj);
+let {age,blood}=obj
+console.log(age,blood);
+// this is used to pull out the value from a large obejct 
 
 
+// spread operator is basically used to open up the value
+function mul(a,b,c){
+    console.log("the multiply is : ",a*b*c);
+    
+}
+
+let arr=[1,2,3]
+// mul(arr[0],arr[1],arr[2])
+mul(...arr)
+
+// so baically it will map the value of the index and the value 
+const object={...arr}
+console.log(object);
 
 
+// var number;  which is undefined 
+const(number);
+var number=786
 
-
-
-
+// let and const me hoisting nhi hoti 
+// remember that let and const me hoisting nhi hoti it is done only in var
 
 
 
