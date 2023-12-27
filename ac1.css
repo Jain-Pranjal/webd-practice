@@ -137,11 +137,32 @@ bulb-on{
 }
 
 
+.card{
+    color: white;
+    /* font-size: 23px; */
+    height:100px;
+    width: 100%;
+    /* display: flex; */
+    background-color: black;
+    display: flex;
+}
+.card img{
+    height: 97px;
+    margin: 0px 25px;
+    /* border: 2px solid green; */
+}
+.text h1, p{
+    margin: 15px 0px;
+}
 
-
-
-
-
+.capsule {
+    position: relative;
+    bottom: 23px;
+    left: 184px;
+    background-color: #181616;
+    width: 37px;
+    border-radius: 5px;
+}
 
 
 

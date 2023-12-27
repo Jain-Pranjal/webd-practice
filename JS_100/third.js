@@ -56,16 +56,16 @@ prom1.then=((a)=>{
 // asyn functuion will takes its own time for the execution 
 // we will use the fetch APi
 
-async function getData(){
-    let x=await fetch('https://jsonplaceholder.typicode.com/todos/1')  //collecting the data or fetching it from the link 
-    // console.log(x);
-    let data=await x.json()  //will convert the data intojson 
-    console.log(data);
+// async function getData(){
+//     let x=await fetch('https://jsonplaceholder.typicode.com/todos/1')  //collecting the data or fetching it from the link 
+//     // console.log(x);
+//     let data=await x.json()  //will convert the data intojson 
+//     console.log(data);
     
     
-}
+// }
 
-getData()
+// getData()
 
 // so as u know that js has a Async nature means it can delay the task and for that we use callback and promise 
 // callback means calling of a function inside a function which means that  we are passing a function to another as an argument 
@@ -180,26 +180,220 @@ let rand=Math.floor(Math.random()*myjoke.length)
 
 // so to create a new date then use the new Date() and then we can access eveerything form it liek hours month date year
 
+// callback function and promises 
+// as we know that js has a async nature means we can delay the execution of the processs int he js 
+// passing a ficntion as an argument to the another function 
+// it is just a funciton that runs inside the another function 
+
+// js has a asyn nature which means that if js encounter any of the async function then it will delay its execution and moves frward and do the async later 
+
+
+// settimeout funciton is an asyn funciton so its eceution will be donelater in the script 
+console.log("first");
+console.log("second");
+setTimeout(() => {
+    console.log("this is inside the tiemout ");
+    
+}, 2000);
+
+console.log("fourth");
+// so setimeout is an async function which means that it will be delayed by the script 
+
+// callback function is a fucntion that is passed to another function as an argument 
+
+// so callback fucntion is the fucntion that is passed as an argument to another fucntion 
+// basciallyw e are passing a fucntion into the another function as an argument 
+
+function display(result){
+    console.log(result);
+}
+// here passing a fucntiona as a argument
+const calc=(a,b,display)=>{
+    let sum=a+b;
+    display(sum);
+}
+
+calc(3,4,display)
+
+// asyn fucntion will be deal later in the script as they are delayed
+// callback is the function thay is passed as an argument inside the another function 
+// just we are passign a function as an argumrnt into the fucntion 
+
+
+// passing of a function as an argument into another function is called the Callback function 
+
+
+const phone=(comment)=>{
+    console.log(comment);
+}
+
+const details=(fname,lname,phone)=>{
+    console.log(`the name of person is ${fname} ${lname}`);
+    let number=phone("good going ")
+    console.log(number);
+}
+
+details("prnajal","jain",phone)
+
+// thats why we use the promise instead of the callback 
+// promise is the promise of the execution of the code 
+// thats why we use promise to avoide to callback heell 
+// promise is the call of execution of code 
+
+
+let prom2=new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("yes i am done");
+        reject("oofooo")
+        // resolve("bittuu")  //it will give the value on resolving the fucntion 
+    }, 3000);
+
+})
+
+// the value recieved on resloving will be access by using the then 
+
+prom2.then((a)=>{
+    console.log(a);
+}).catch((error)=>{
+    console.log(error);
+})
+
+// so it willl passt the value jiske sath vo resolve hua hai 
+// .catch is used to catch the error and hold it 
+
+
+// the resolve promise will give a value and it is don insde the then 
+// the reject is tackle inside the catch 
+
+// resolve and settle means settle means either it will resolve or reject 
+// resolve will give a value after resolving without giving any error 
+
+let prom3=new Promise((resolve, reject) => {
+    rand=Math.random()
+    if(rand<0.5){
+        resolve("less than 0.5")
+    }
+    reject("greter than 0.5")
+    
+})
+let prom4=new Promise((resolve, reject) => {
+    rand=Math.random()*3
+    if(rand<1.5){
+        resolve("less than 1.5")
+    }
+    reject("greter than 1.5")
+    
+})
+
+let P=Promise.allSettled([prom3,prom4])
+P.then((a)=>{
+    console.log(a);
+}).catch(err=>{
+    console.log(err);
+    
+})
+
+// async and await concept in js 
+// basically we can make a function to be async in nature and then its executiin will be delayed 
+// callback is the function that is passed as an argument to anothr function but to avoud the callback hell we use the promises
+
+
+// so basically if we want to wait for the executuion of the code belwo then we use the await 
+
+// async function getData(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             console.log("hemloooooooooooo");
+//             resolve(123321)
+//         }, 5000);
+//     })
+// }
+async function getData(){
+    
+    let x= await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    let data=await x.json()
+    console.log(data);
+    
+    
+      
+}
+async function main(){
+
+    console.log("start");
+    console.log("process");
+    let data= await getData()
+    console.log("data is ",data);  //data is resolve value 
+    // so the resolve value is the data 
+    console.log("end");
+}
+
+// so baically the function wait for the execution to complete then it will move further to next code
+
+main()
+//async fucntion will be running in the background 
+
+// for making the async fiunction we need tok used the async command and 
+// for using the await function we need to pack that fucntiion again into a async fucntion to control the flow of the that fucntion 
+
+// await is used in async function only
+// instead of using the then and catch use the async and await 
+
+
+// when we use the fetch then we will be getting 2 promise 
+// data ko lane ka promise and then data ko convert karne ke promise 
+
+
+// both these things takes time to complete so we will wait for them to complete 
+// await function runs into the async function only 
+/*
+async function kuchbhi(){
+    data= await fetch("link")
+    jsonvaladata= await data.json()
+    return jsonvaladata
+}*/
+
+// so remember that while fetching from the API we have to get 2 promise as fetching from API and converting into the json both takes small time so we will wait for them 
+// they will both give promise that they will complete 
+
+
+// card ques 
+
+// let title= prompt("Enter the title : ")
+// document.querySelector(".card").children[1].children[0].innerHTML=title
+// let views= Number.parseInt(prompt("Enter the views : "))
+// document.querySelector(".card").children[1].children[1].innerHTML=views
 
 
 
 
 
+function createCard(title,cname,views,monthsOld,duration,thumbnail)
+{
+let viewStr;
+if(views<1000000){
+    viewStr=views/1000 + "K"
+}
+else if(views>1000000){
+    viewStr=views/1000000 + "M"
+}
+else{
+    viewStr=views/1000 
+}
 
+let html=`<div class="card">
+<div class="img">
+  <img src="${thumbnail}" alt="">
+  <div class="capsule">${duration}</div>
+</div>
+<div class="text">
+<h1>${title}</h1>
+  <p>${cname} . ${viewStr} views . ${monthsOld} months ago</p>
+</div>
+</div>`
+document.querySelector(".container").innerHTML=document.querySelector(".container").innerHTML+html
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+createCard("pranjal jain ke video","jaincoo",54000,2,"52:5","https://cdn.pixabay.com/photo/2015/03/10/17/23/youtube-667451_1280.png")
 
 
 
