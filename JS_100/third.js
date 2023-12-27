@@ -96,8 +96,16 @@ document.body.querySelector(".wow-but").addEventListener("dblclick",(e)=>{
 
 const sum=(a,b)=>{
     console.log("the sum is :" , a+b);
-    
 }
+
+
+// let mynum=Number.parseInt(prompt("Enter kar apna number : "))
+// if (mynum==1){
+//     removeEventListener(e)
+// }
+
+// handler nust be same so as to remove the evenet
+
 document.body.querySelector(".wow-but").addEventListener("click",(e)=>{
     // console.log(e.keyCode,e.key);  
     let n1=Number.parseInt(prompt("enter the 1 : "))
@@ -105,21 +113,72 @@ document.body.querySelector(".wow-but").addEventListener("click",(e)=>{
     sum(n1,n2)
 })
 
+// os make the event handler by using the event handler by using th addevenet 
+
+
+const small_ele=document.querySelector(".small")
+small_ele.addEventListener("dblclick",(e)=>{
+    sum()
+    console.log("You are clicking this element")
+    small_ele.innerHTML ="this is SUPRISE !!!!"
+    // document.querySelector("small").style.height="55px";
+})
+
+// make the event object for removeing the same event listerner
+
+// so with the event listener we aslo pass the eveent object which is used for add or remove the event from it
+// client x and client y basically shows the coordinated of the cursor 
+
+
+// PS of the event and DOM
+
+
+document.body.querySelector(".btn-1").addEventListener("click",(e)=>{
+    alert("this is 1")
+    location.href="https://www.google.com"
+})
+document.body.querySelector(".btn-2").addEventListener("click",(e)=>{
+    alert("this is 2")
+})
+document.body.querySelector(".btn-3").addEventListener("click",(e)=>{
+    alert("this is 3")
+})
+
+// we can pass a link to the DOM using the location.href 
+// and then we can chane the link href 
+
+// 
+// json bacially is the javascript object notation in whcih we can store the data in the json format that means we need to create the element just like the objects in the javascript 
+
+
+let bulb=document.querySelector(".bulb")
+bulb.addEventListener("click",(e)=>{
+    console.log("glow");
+    bulb.classList.toggle("bulb-on")
+})
+// bulb.addEventListener("click",(e)=>{
+//     bulb.classList.toggle("bulb-off")
+// })
+
+
+// location.href to change the link 
+// location.reload to refresh the website 
+
+
+// jokes random on screeen 
+let myjoke=[11,22,33,44,55,66,77,88,99,110]
+let rand=Math.floor(Math.random()*myjoke.length)
+// setInterval(() => {
+//     location.reload()
+// }, 2000);
+// setInterval(() => {
+//     console.log(myjoke[rand]);
+// }, 1000);
+// console.log(rand);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// so to create a new date then use the new Date() and then we can access eveerything form it liek hours month date year
 
 
 
