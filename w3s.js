@@ -20,6 +20,8 @@ console.log(a);
 class animal{
     "run"=true
     name="sheru"
+    age=54
+    location="delhi"
 }
 
 let hello=new animal()
