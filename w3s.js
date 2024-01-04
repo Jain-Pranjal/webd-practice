@@ -45,22 +45,24 @@ let hello=new animal()
 // String charCodeAt()
 // String split()
 
-// 
-/*JavaScript Event Handlers
-Event handlers can be used to handle and verify user input, user actions, and browser actions:
+// This operator
+/*The handling of this is also different in arrow functions compared to regular functions.
 
-Things that should be done every time a page loads
-Things that should be done when the page is closed
-Action that should be performed when a user clicks a button
-Content that should be verified when a user inputs data
-And more ...
-Many different methods can be used to let JavaScript work with events:
+In short, with arrow functions there are no binding of this.
 
-HTML event attributes can execute JavaScript code directly
-HTML event attributes can call JavaScript functions
-You can assign your own event handler functions to HTML elements
-You can prevent events from being sent or being handled
-And more ...
+In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+With arrow functions the this keyword always represents the object that defined the arrow function.
+
+Let us take a look at two examples to understand the difference.
+
+Both examples call a method twice, first when the page loads, and once again when the user clicks a button.
+
+The first example uses a regular function, and the second example uses an arrow function.
+
+The result shows that the first example returns two different objects (window and button), and the second example returns the window object twice, because the window object is the "owner" of the function.
+
+
  */
 
 
