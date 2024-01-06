@@ -45,15 +45,16 @@ let hello=new animal()
 // String charCodeAt()
 // String split()
 
-// This operator
+// async / await
 /*{
-"employees":[
-  {"firstName":"John", "lastName":"Doe"},
-  {"firstName":"Anna", "lastName":"Smith"},
-  {"firstName":"Peter", "lastName":"Jones"}
-]
+"async function myDisplay() {
+  let myPromise = new Promise(function(resolve) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
 }
 
+myDisplay();
 
  */
 
