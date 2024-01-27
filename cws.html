@@ -51,6 +51,42 @@
       .box{
         position: relative;
       }
+
+      .class1{
+        background-color: yellow;
+        height: 50px;
+        color: balck;
+      }
+      .class2{
+        color: blue;
+      }
+
+      .blackie{
+        background-color: black;
+        color: white;
+        font-size: large;
+      }
+
+      .greenery{
+        background-color: darkgreen;
+        color: white;
+      }
+
+      .dark-mode{
+        background-color: gray;
+        color: white;
+      }
+      .btn-dark{
+        background-color: black;
+        color: white;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 9px;
+        margin: 5px;
+        border: 2px solid red;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -64,13 +100,32 @@
 
     <br /><br />
     <div class="box">
-      <img
+      <img class="img"
         id="hello"
         src="https://images.unsplash.com/photo-1705651599790-b8fb7e2ed9aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
         alt=""
       />
     </div>
+    <button id="black">click to change</button>
+    <div class="class1">
+      <div class="class2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione laudantium quo asperiores unde fugit facere recusandae libero dolore porro nobis! Neque, debitis, saepe rerum asperiores, recusandae velit ullam quasi omnis quam architecto quae.</div>
+    </div>
+    <div class="class1">2</div>
+    <div class="class1" onclick="console.log('i have been clicked');  //here i am adding the inline js events inline evenets which is not prefereed use the evenvet listener
+    ">3</div>
+    <div class="class1" onclick="console.log('balle balee');
+    ">4</div>
+    <div class="class1">5</div>
 
+<br><br>
+<button class="btn-dark">Click to get dark mode</button>
+
+
+  
+
+
+
+    <script src="/JS_100/ac1.js"></script>
   </body>
 </html>
 

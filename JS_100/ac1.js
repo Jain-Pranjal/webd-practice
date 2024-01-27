@@ -421,26 +421,76 @@ document.body.querySelector(".class1").insertAdjacentElement("beforebegin",ele)
 
 // create anythin insde thedoc only 
 // so it always be created inside the document only  
+// so create the elemnet in doc onlyv 
+
+// so create a button
+let btn=document.createElement("button")
+btn.innerText="click me "
+document.querySelector("body").insertAdjacentElement("afterbegin",btn)
+
+// eveent ka matlab tumne kuch harkat kare hai 
+// u have done something harkat is called the event 
+
+
+// we will add the event listener not th einline js liek te onlclick 
+
+// btn.onmouseover=()=>{
+//     // code with efunction what to do 
+// }
+
+
+// btn.addEventListener("mouseover",function pranjal(){
+//     console.log("this is prnajal");
+    
+// })
+
+// js event > inline eveent handling 
+document.body.getElementsByClassName("class1")[3].addEventListener("click",function print(){
+    console.log("this is done by using the js event ");
+    
+})
+document.body.getElementsByClassName("class1")[3].addEventListener("click",function print(){
+    console.log("this is done by using the js event ");
+    
+})
+
+// js code will tkae proirty in the handlng the event 
+document.body.getElementsByClassName("class1")[3].onclick=(e)=>{
+    console.log(e);
+    
+}
+
+// we can get the eveent object property by using the eveent obejct 
+document.body.getElementsByClassName("class1")[3].onmouseover=(e)=>{
+    console.log(e);
+    // e is th eevent obejct that store all the info of the event tareget , type or the postion 
+}
 
 
 
+const handler=(e)=>{
+    console.log("hello i m done by arrow funciton ");
+    console.log(e);
+}
+
+// so we can pass the handler here whcih is the callback function as it is passed as an argument to the function 
+document.body.getElementsByClassName("class1")[4].addEventListener("click", handler)
+// to remove the event fromthe eleemt we need to pass the same event handler to this
 
 
+// it is a callbakc funciton as it takes the argument as a function inside it )
+// by using the event listener we can do multiple evenets listen on the same evenet 
 
+// we can have the multiple event s using the event listerner 
+// for removing the evenet listenenr the handler must be same so that they are in same memory
+// document.body.getElementsByClassName("class1")[4].removeEventListener()
 
+// for removing pass the same hanlder by storing in some variable 
+document.body.querySelector(".btn-dark").addEventListener("click",(e)=>{
+    document.body.classList.toggle("dark-mode")
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
+// so it will apply the whole effect on the body 
 
 
 
