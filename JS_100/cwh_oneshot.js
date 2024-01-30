@@ -160,9 +160,17 @@ console.log(jso);
 // ecma script is the standard through whcih js is maintainede and sustained 
 // it maintains the varsion and standard the js by the ecmascript as it is the main body 
 // ES6 is the modern js as we got the let and const 
-
-
-
+setInterval(() => {
+    // all need to be inside the interval of the 1 sec 
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    a=new Date()
+    let time=`${a.getHours()} : ${a.getMinutes()} : ${a.getSeconds()}`
+    let date=a.toLocaleDateString()
+    let day=a.getDay()
+    document.querySelector("#time").innerHTML=time
+    document.querySelector("#date").innerHTML=date
+    document.querySelector("#day").innerHTML=weekday[day]
+}, 1000);
 
 
 

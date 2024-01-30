@@ -33,6 +33,19 @@
           justify-content: center;
           align-items: center;
         }
+        
+        .clock{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: antiquewhite;
+          height: 400px;
+          width: 100%;
+          font-size: 55px;
+
+        }
+
+
     </style>
 </head>
 <body>
@@ -181,7 +194,14 @@ after the return in the fucntion the code is not executed further
 <div class="outBtn">
   <button class="note">Add note</button>
 </div>
-
+<br><br>
+<div class="clock">
+  <div class="main">
+    Current time is : <span id="time"></span><br>
+    Current date is : <span id="date"></span><br>
+    Current day is : <span id="day"></span>
+  </div>
+</div>
     <script src="JS_100/cwh_oneshot.js"></script>
 </body>
 
