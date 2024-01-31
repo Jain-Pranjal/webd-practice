@@ -173,6 +173,15 @@ setInterval(() => {
 }, 1000);
 
 
+// remeber that json is a text interchange format that is used to transfer the message across the web in this particular format so we need to use the json thenat can be originated from the objects by strinfy it and again convered back to objects using the parse() 
+// also remeber that json always takes the data into the "" double brackets only 
+
+
+// one thing to remembet in json is that we can convert any json in object using the using the parse and again baack to the json using json.stringfy 
+// so we need to use the json for exchanging the data as it is lightwight in nature so can use it 
+// 
+
+fetch
 
 
 
