@@ -120,10 +120,14 @@ obj.name()
 obj={
     "name":'Jai\\"n',
     age:55,
-    school:"bmps"
+    school:"bmps",
+    love:function lovable(){
+        console.log(this);
+         
+    }//this is a method that means it is declared  inside the object so this will point to to the parent object 
 }
 
-console.log(obj);
+console.log(obj.love());
 // console.log(typeof obj);
 // to conver this object into the json 
 let jso=( JSON.stringify(obj))  //json is converted into the string format 
@@ -347,35 +351,154 @@ document.querySelector("#minus").addEventListener("click",function(){
 // so the proir importance will be given to the js file not the inline js for th eevent handling 
 
 // so to remove the funtion we need to pass the same event handler that will remove it 
-document.querySelector("#plus").removeEventListener("click",plus_event) //here we pass the same event as we had store the finction tin it
+// document.querySelector("#plus").removeEventListener("click",plus_event) //here we pass the same event as we had store the finction tin it
 
 // so we hav ot pass the same handler inorder to delete the event listerner as it will store in the same memeory for that
 // now this handler will be refered to one only so it will be removed callback reference should be same 
 
 
+// // window.onload = function(){
+//     var button=document.querySelector("#plus");
+//     setInterval(function(){ 
+//       button.click();
+//     }, 100);
+// //   }
+
+// the coiunter is only counting but not cliclking so i need to use the click() for making the click of the button 
+let id=setInterval(() => {
+    document.querySelector("#plus").click()
+}, 1);
+clearInterval(id)
 // classes and objects 
+// this operator 
+function t(){
+    console.log(this);
+}
+t()
+// global , function this will give the global object 
+// insde theevent listenre this will point to the same element to ehich we had givent hr event lister 
+// inside the methdo (funciton that i sbeing declared inside the objecy)
+// so inside the methdo it will point to the object 
+
+// whenever we make some object we alos got the some functionn provided by the browser that is by proto 
+let myobj=
+{//inside the object we can store some variable and some methdods(function that are made inside the object is called the method)
+    name:"jain",
+    age:55,
+    method:function hello(){
+        console.log("hello everyone");
+        
+    }
+}
+
+// class making 
+class details{
+    constructor(name,subject){
+        this.name=name
+        this.subject=subject
+        console.log(`${this.name} ka subject hai ${this.subject}`);
+    }
+
+    country="india"
+    age=20
+}
+
+// objects contains the properties and methdos
+
+let student1=new details("pranjal","english")
+// whenever we make the object the constructor automatically starts and we can pass the values to it 
+// so the webbrowser create the prototype for every object automatically for every object jtere is a prototype by the webbrowser
+
+//so the objects or the array s(type of onject ) caontains th eprototype that has the special features for them so we need to use them 
+// w can directly writ the method insde the object also 
+
+// so we can direclty write the method inside the object without the name 
+// to access anything inside the object use the this operator as it will point to the main person obejct 
+const employee={
+    calcualteTax(){
+        console.log("tax is 10%");
+        
+    },
+    salary(){
+        console.log(this.name," ke salary is kuch nhi ");   
+    },
+    king:function kingdom(){
+        console.log("i have a large kingdom");
+    },
+    name:"lov bhai",
+}
+// so we dfine th efunction directly in object without the key pair 
+// so we can make th eproto of the object using the __proto__ that will actulaly inherit the peorty and methos id one to another 
+
+const rampal={
+    dept:"engineering"
+}
+
+rampal.__proto__=employee
+// so in this way i can make the use of the obejct 1 proprty and methods inside the some else just liek the inheritence
+// so if the same method is in the object and also in the same proto then the method will be override and the object method is usde in place of the proto
+
+class car{
+    constructor(mybrand,tyre){
+        this.brand=mybrand  //we have to store the value also befire using it 
+        this.tyre=tyre  //we have to store the value also befire using it 
+        console.log(`the brand name is ${this.brand}`);
+        console.log(`the tyre number is ${this.tyre}`);
+    }
+
+    start(){
+        console.log("start the car");
+        
+    } //so direclty write the function wihtout using the key name 
+    stop(){
+        console.log("stop the car");
+}
+    setprice(price){
+        this.setprice=price
+    }
+}
+
+// to pass the value form one con to another use the super by passing the argument in it 
+
+class engine extends car{
+    constructor(brand,tyre){
+        super(brand,tyre)  //this will be used to invoke the parent class construcutor 
+        // to pass the argument to the aprent construcutor we can pass the argument inside the super that will be accepted by the paent 
+        console.log("this is the child class construcutor");
+        
+    }
+    
+
+    engine(){
+        console.log("the engine is horse power 244");
+        
+    }
+    stop(){
+        console.log("stop the car as engine died");  //in the child class i override the parent class method 
+}
+}
+let toyata=new car("zing bus") //if we pass as this so it will go to the construcutot not the specific funtion 
+// so we need to accessse tthe value explicitly 
+
+// so if we make the object ans pass the value it will go the the constrcutor that will be immediately used 
+toyata.setprice=900000
+// at the time of the initialisatio construcutor do its work seemlessly 
+let maruti=new engine("maruti",4)
+// super keyword is used to invoke the parent construcutor first then the child construvutor later so it will go to parent then child 
 
 
+// so we accept as many as the argument inside the cosn and using the super we will send only those whose are needde for the parent one 
+class admin extends car{
+    // constructor(brand,tyre){
+    //     super(brand,tyre)
+    // }
+    printIntro(){
+        console.log("hola");
+        
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let admin1=new admin("ferrai",5)
 
 
 
