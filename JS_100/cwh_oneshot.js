@@ -438,6 +438,8 @@ rampal.__proto__=employee
 // so in this way i can make the use of the obejct 1 proprty and methods inside the some else just liek the inheritence
 // so if the same method is in the object and also in the same proto then the method will be override and the object method is usde in place of the proto
 
+/**
+ * 
 class car{
     constructor(mybrand,tyre){
         this.brand=mybrand  //we have to store the value also befire using it 
@@ -499,6 +501,102 @@ class admin extends car{
 }
 
 let admin1=new admin("ferrai",5)
+*/
+
+// Async js
+// if("geolocation" in navigator){
+//     navigator.geolocation.getCurrentPosition(function(position){
+//         let lat=position.coords.latitude
+//         let long=position.coords.longitude
+//     })
+
+// }
+
+// for(var i=1;i<=3;i++){
+//     setTimeout(() => {
+//         console.log(i);
+        
+//     }, 1000);
+// }
+// callback function is the passing of the funciton in the arg
+function sum(a,b){
+    console.log(a+b);
+}
+
+function calc(a,b,sumcallback){
+    sumcallback(a,b)  //it stores the function 
+}
+// passing a function as an argumet is called a callback 
+calc(5,1,sum)
+// const intro=() => {
+//     console.log("callback funciton");
+    
+// }
+// setTimeout(intro(), 1000);
+
+// nesting of the callback is called the callback hell
+
+function getdata(id,nextdata){
+    setTimeout(() => {
+        console.log("data :" ,id);
+        if(nextdata){
+            nextdata()  //it containts the getdata(5)
+
+        }
+    }, 2000);
+    
+}
+
+// matlab ek function 2 sec ke baad run and then again 2 sec ke baad run 
+
+// passing a the  function as a callback 
+getdata(3,()=>{
+    getdata(5)
+})
+
+// now to soleve the problem of callback hell we need the promise 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
