@@ -179,10 +179,181 @@ setInterval(() => {
 
 // one thing to remembet in json is that we can convert any json in object using the using the parse and again baack to the json using json.stringfy 
 // so we need to use the json for exchanging the data as it is lightwight in nature so can use it 
-// 
 
-fetch
+// the variable of the function are local scoped variabel in nature 
 
+// we can store the function inside the vcariabel name so we can use them as jsut like the variable 
+const name=(param1,param2)=>{
+    // function code
+}
+
+// // making of the function with no name
+// ()=>{
+//     console.log("this function has no name so it is anonymous function ");
+    
+// }
+
+// const help=()=>{
+//     return 101
+// }
+// // fat arrow function 
+// // so it will return the value when we call the arrow function to it 
+// console.log(help());
+// // help()
+
+// const var_fun=(a,b)=>{
+//     //fucntion code 
+// }
+// // now i can access this function from this name 
+function vowels(msg){
+    let count=0  //as it is declared outside of the loop then it is accessible anywhere ISIDE  the function only as its scope is to function on ly 
+    for (const i of msg) {
+        if(i==="a"||i==="e"||i==="i"||i==="o"||i==="u"){
+            count++
+        }  
+    }
+    console.log(count);
+}
+// so declaring iknside the large bracket makes it accessible anywhere in the block of code so that we can do any  changes in that 
+
+vowels("pranjal")
+
+// for each loop is used to iterate the array that take the callbak function to it 
+// callback fun is a function that takes the argument as a function in it 
+// setInterval(() => {
+//     console.log("ji");
+//     // so it is taking a function as a arguument so setitimeinterval accespt the function as a arg
+// }, 200);
+
+// let myarr=[515213,515,4,564,8564,4,5,5,11,415,4,5,3]
+// myarr.forEach(e=>{  //passing a arrow function so it is a callbakc fun passing inside the foreach 
+//     console.log(e);
+    
+// })
+
+// object ke under agar we define a function than it is called a method 
+// so making a function inside the object is called a method 
+
+
+
+
+obke={
+    "name":function hello(){
+        console.log("hello")
+    }
+    // this is a method that is made inside the obejct meansing that making a function inside the object is called the method 
+    // so making of the method means making  a function inside the object 
+}
+
+// hof :- what are hogh order function ?
+// when a fun passes as an argumrnt or function returns another function or either both then it is called the HOF
+
+function printing(){
+    try {
+        console.log("this is done as there is no error");
+        throw new Error("this is the error message ")
+        console.log("another statemnet but we have write it after the throw so the flow will go to the catch block and it will not get execute ");
+    } catch (error) {  //catch will accept the error in it and we can print the messag ewhat was the error by using the error.message 
+        console.log(error.message);
+        console.log("this is inside the catch ");
+    }
+}
+
+// so we can aslo create our own error and throw that into the catch block 
+
+// for each is usd for the array 
+// in the callback we can pass the 3 parameter in it index , value , array 
+
+// so making of the callback function bahar and then passing in for each loop 
+let print=(e,indx,arr)=>{
+    console.log(indx,e,arr);
+    // index ppsotiion is second first is the vaclue that is iterating in it 
+}
+let myarr=[45,4,54,5,45,4,8,4,100]
+// myarr.forEach(print)
+
+// /so we can pass the value , index and array as th eoptional parameter in callback 
+
+// callbakc is just liek a regualr function that we pass inot the foreach loop so we can make the function outside also and then directly passng th function 
+
+// imp methods of the array 
+// map method 
+
+// map and filter makes the new array for the operation 
+// so basically it s is used for mapping by making a new array 
+let new_arr=myarr.map((val)=>{
+   return val**3
+// so basically it will return to the new array after performig and mapping the values to the new array from th eolder one 
+})
+// map makes the new array an
+// console.log(new_arr);
+// so basically map will return the values into the new array whereas the foreach make the changes in the orriginal one only
+// so baically it will store the values insde the variable that we have created 
+// so map and filter makes the   new array 
+
+// let new_arr2=myarr.filter(e=>{
+//     if(e%10===0){
+//         return e
+//     }
+// })
+// map and filter makes the new array form the older one
+// filter makes the filtering vlaue if condition is true
+// it also returns the new array for it 
+
+// ṃap and filter makes the new array 
+// let marks=[56,66,99,89,93,94]
+// let marks_90=marks.filter(e=>{
+//     return e>90
+// })
+// so basically it will filter out the value from the array and makes the new array 
+
+let fact=[1,2,3,4,5,6]
+// so we calculate the mlitplaction and save it in the one term by using the reduce 
+// so basically we can find the fatorail in this way also 
+let re_arr=fact.reduce((prev,curr)=>{
+    return prev*curr
+})
+console.log(re_arr);
+// so baically reduce makes the operation on the one item only 
+
+// evenets provides th einteraction 
+// mouseover
+// using the add event listener wecan have the multiple evenets on the same element 
+
+let upd=document.querySelector("#number")
+let counter=0  //it is a actual number so we can use it directly 
+// make a additional counter and and then update it and use it in the inner html counter to update the real value 
+
+// using the event listener we can do the multiple work inside the event listerenr whcoh is not possible in the simple node function 
+let plus_event=()=>{
+    counter++;
+    upd.innerHTML=counter
+    console.log("love");
+    
+    // console.log(e.type);
+
+}
+
+document.querySelector("#plus").addEventListener("click",plus_event)
+
+document.querySelector("#minus").addEventListener("click",function(){
+    counter--;
+    upd.innerHTML=counter
+})
+
+// so we can also use the event object 
+
+// we also have the evenet object which stores l the info abt the event 
+// so the proir importance will be given to the js file not the inline js for th eevent handling 
+
+// so to remove the funtion we need to pass the same event handler that will remove it 
+document.querySelector("#plus").removeEventListener("click",plus_event) //here we pass the same event as we had store the finction tin it
+
+// so we hav ot pass the same handler inorder to delete the event listerner as it will store in the same memeory for that
+// now this handler will be refered to one only so it will be removed callback reference should be same 
+
+
+// classes and objects 
 
 
 
