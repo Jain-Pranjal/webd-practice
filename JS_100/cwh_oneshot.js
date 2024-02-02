@@ -703,14 +703,14 @@ function api(){
     })
 }
 
-(async function(){
-    // await api() //1st call
-    // await api() //2st call
-    for(let i=0;i<=5;i++){
-        await api(i)
-    } 
+// (async function(){
+//     // await api() //1st call
+//     // await api() //2st call
+//     for(let i=0;i<=5;i++){
+//         await api(i)
+//     } 
 
-})()
+// })()
 
 // iife can be used only once for the executuoin of async nd await 
 // it makes the variable proivate in the iife
@@ -721,16 +721,38 @@ function api(){
 
 
 
+// API calling 
+const URL="https://cat-fact.herokuapp.com/facts"
+// fetc api is used for fetching the data from the url for botht the req and respose of the object
+// so await works in the async function only 
+
+// as we are dealing with the promise so we need to use the async function 
+
+const getfacts=async()=>{
+    console.log("getting data ....");
+    let response= await fetch(URL)
+    console.log(response);
+    let data=await response.json() //covnerting in object 
+    console.log(data[1].text);
+    
+    
+}
+document.querySelector("#fact").addEventListener("click",getfacts)
 
 
+// it by default send the get request which send a promise which will be eventually fullfilled or reject 
+// os we need to handle the promise that will be given by the fetch api 
 
 
+// the response is an object that is in th ejson format so we need to t it 
+// by defualt it makes the get request
 
+// we need to convert the format given by the api into the object 
 
+// JSON() is also a async function that gives the second promise 
+// headers contains the additional information that we can semd or recive on the api call
 
-
-
-
+// the api also gives the promise that either it will resolve or rejectd then we have to handle it 
 
 
 
