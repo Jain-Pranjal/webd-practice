@@ -550,23 +550,128 @@ function getdata(id,nextdata){
 // matlab ek function 2 sec ke baad run and then again 2 sec ke baad run 
 
 // passing a the  function as a callback 
-getdata(3,()=>{
-    getdata(5)
-})
+// getdata(3,()=>{
+//     getdata(5)
+// })
 
 // now to soleve the problem of callback hell we need the promise 
+// promise are the object in js 
+
+// we have 3 states :- pendning , resolved and rejected
+// so this is returning a new promise to the called function
+const getpromsie=()=>{
+    return new Promise((resolve,reject)=>{  //the resolve and reject is createed auto
+        console.log("i m a promise");
+        resolve("success")
+        // reject("error aa gya bhai !!!")
+        // so we can decide wheter the promise will be fullfilled or rejected 
+        // mkaing this promise a RESOLVE
+    })
+};
+let p1 = getpromsie();  // Assign the promise to p1
+
+p1.then((res) => {
+  console.log("This is done because the promise is being resolved due to the ",res," result");
+});
+p1.catch((err)=>{
+    console.log("this is rejected due to the ",err," error ");
+    
+})
+
+// so we can use the message that we passed during the resolve and reject of the promise in the then and catch
+
+// we use the promsie with the API as in return they give us the promise whether they will be fullfilled or reject an don that wee take the decision 
+// how to use the promise 
+// if we want to do some work after the promiswe had been resolved then use the promise.then and if rejectd then use the promise.catch 
 
 
+// on calling of this functionit will return a new promise that can be either resolved or rejected 
+// so if resolved then what are we to do use the promise.then
+// if reject then use the promise.catch to do the next thing with them 
 
 
+// we dont know wheter on calling on api it will resolved or reject . it will only give the promise that have the state pending (if it takes time )
+// we can only handle the resolve and reject condition for the promise using the then and catch and also if we pass any messag eto them we can show them 
 
 
+// Promise Chaining 
+// this fun will return the promise 
+function asyncFunc1(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("this will be printed after 2 s");
+            resolve("this is the resolved message of 1 ")  //resolve message after the resolving of the promise 
+            // reject("bhai sorry promise rejected")
+            
+        }, 2000);
+
+    })
+}
+function asyncFunc2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("this will be printed after 2 s");
+            resolve("this is the resolved message of 2 ")   //resolve message after the resolving of the promise 
+            // reject("bhai sorry promise rejected")
+            
+        }, 2000);
+
+    })
+}
+// promise works on the async type of the function 
+
+function asyncFunc3(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("this will give the third promise");
+            resolve("issue resolved ")
+        }, 3000);
+    })
+}
 
 
+// ya to promise fullfiled hoga ya to reject hoga so we need to tackle both the situation to handlel the promise either fullfilled or rejected 
+
+// so on resolveing what should it do will be taken in the promise.then 
+// it iwll return the promise to the one who called the async function 
+// let p2=asyncFunc1()    //this is returning a promise whose next outocme will be handled by the .then
+// p2.then((res)=>{
+//     console.log(res);
+//     console.log("fetching the data 2.........");
+//     let p3=asyncFunc2()
+//     p3.then((res)=>{
+//         console.log(res);
+//     })
+    
+// })
+
+// directly use the then operator as both the function is just returning a promise to the called function 
+// also can write in this way
+asyncFunc1().then((res)=>{
+    console.log(res);
+    asyncFunc2().then((res)=>{
+        console.log(res);
+        asyncFunc3().then((res)=>{
+            console.log(res);
+            
+        })
+        
+    })
+})
 
 
+// so it will print the data only when the resolove of 1 is true and then i will print the resolve of 2
 
 
+// in the chaining process we can chanin the promise so that after the resolve of 1 promise then the 2 promise will execute 
+// passing of the then inside the then is called the promise chaining means it will show the resolved only after once then 1 was was shown 
+
+// when we make a request to an API it takes some time oto process but givs a promise instantly in a apending state 
+// that promose can either be resolve (fulfilled ) or reject so we need to tackle the situation ke dono ke situation me kya hoga 
+// so if the promise is resolved then use the then 
+// if reject then use the catch ti do the foloowign gtask after the promise 
+
+// promise chaining is the promise ke agar yeha kaam ho gya hai tehn iske baad yeah kaam karo 
 
 
 

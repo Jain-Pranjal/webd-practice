@@ -51,6 +51,11 @@
           align-items: center;
           
         }
+.glow:hover{
+  color: hwb(280 0% 0% / 0.923);
+  box-shadow: 0 5px 15px rgba(141, 15, 232, 0.4);
+}
+
         .counter{
           width: 50%;
           height: 35vh;
@@ -277,8 +282,8 @@ after the return in the fucntion the code is not executed further
 <div class="counter">
   <div id="number">0</div>
   <div class="buttons">
-    <button id="plus">+</button>
-    <button id="minus">-</button>
+    <button id="plus" class="glow">+</button>
+    <button id="minus" class="glow">-</button>
   </div>
 </div>
   
