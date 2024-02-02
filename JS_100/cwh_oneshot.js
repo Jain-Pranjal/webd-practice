@@ -647,6 +647,9 @@ function asyncFunc3(){
 
 // directly use the then operator as both the function is just returning a promise to the called function 
 // also can write in this way
+
+/**
+ * 
 asyncFunc1().then((res)=>{
     console.log(res);
     asyncFunc2().then((res)=>{
@@ -659,6 +662,7 @@ asyncFunc1().then((res)=>{
     })
 })
 
+*/
 
 // so it will print the data only when the resolove of 1 is true and then i will print the resolve of 2
 
@@ -674,21 +678,46 @@ asyncFunc1().then((res)=>{
 // promise chaining is the promise ke agar yeha kaam ho gya hai tehn iske baad yeah kaam karo 
 
 
+// Async and Await 
+// async function always returns a promise 
+// async is used to make the function asynchronous in nature 
 
 
+// now this function will return a promise alwasys
+async function hello(){
+    console.log("hello peeps");
+    
+}
+
+// await keywrod can only be used in the async function only 
+// remmeber to ise the await insid the async only that means it will for thr promise by the async func to get resolvd 
+
+// await only uses in the async function 
+function api(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("weather data");
+            resolve(200)
+            
+        }, 2000);
+    })
+}
+
+(async function(){
+    // await api() //1st call
+    // await api() //2st call
+    for(let i=0;i<=5;i++){
+        await api(i)
+    } 
+
+})()
+
+// iife can be used only once for the executuoin of async nd await 
+// it makes the variable proivate in the iife
 
 
-
-
-
-
-
-
-
-
-
-
-
+// so now it will do the work only when one work is finish 
+// getWeatherdata()
 
 
 
