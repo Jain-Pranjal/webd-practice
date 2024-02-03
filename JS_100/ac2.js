@@ -68,6 +68,10 @@ console.log(newarr);
 
 // console.log(myarr);
 
+// filtering the marks of the students 
+/**
+ * 
+
 // map and filter make the new array after performing the operation 
 let marks=arr.filter(e=>{
     return e>90
@@ -83,6 +87,150 @@ let mysum=myarr.reduce((res,current=>{
     return res+current
 }))
 console.log(mysum);
+*/
+
+// class and objects 
+// class is a template through which we can make the objects from it 
+// whenever we crete a object there is a prototype that automatically be there which provied additional proprty to the object 
+
+// prototype is the property that is there when we create the object so it is created automatically by the web browser 
+
+
+// obejct contains the property and methods(functions that are define inside the object is called mehtd)
+// class is just a template through which we can make the multiple object from it 
+// usign the class we can alos pass the consrtucutor which will do the work on makin gon th eobjects only 
+class animal{
+    constructor(name,age,kingdom){
+        this.name=name,
+        this.age=age,
+        this.kingdom=kingdom
+        // we can use this value by accessing them here only 
+        console.log(`${this.name} lives in ${this.kingdom} and age is ${this.age}`);
+        
+    }
+    eat="healthy food"
+    sleep="night only"
+    run(){
+        console.log("running and walkingf");
+        
+    }
+}
+
+class hunter extends animal{
+    constructor(Hname,name,age,kingdom){
+        super(name,age,kingdom) //direclty passing the agument in the parent constructor 
+        this.Hname=Hname
+        console.log(`hi i m a hunter and my name is ${this.Hname}`);
+    }
+    run(){
+        console.log("this method is overrideen in this class");
+        
+    }
+}
+
+
+// constructor automativcally invoked wheneer we make a obejct 
+// so we cna use the construcutot to pass the value 
+
+// let tiger=new animal("Tiger",12,"land")
+let h1=new hunter("lokesh","Tiger",12,"land")
+// as it extends the parent class sok first we need to print the parent construcutor first so use the super keyword 
+
+// so we can use the construcutot to use the value instanntly 
+// so make the object using the class
+// prototype provide the additional feature the object auto matiaclly inject by the web browser 
+
+
+// with the object we have the priototype inbuilt in it whcih provide the additional property to it 
+ 
+// alll the objects that we make has a default prototype oin it wjich have the various properties
+// we can aslo mak the fucntion directly in the object wihout anyv key 
+let employee={
+    calculateTax(){
+        console.log("the tax is 10%");
+        
+    },
+    // here we have using the key value pari of making a method inside the property of the salary
+    salary:()=>{
+        console.log("the salary is 20LPA");
+        
+    }
+}
+
+let ram={
+    perks:"none"
+}
+
+ram.__proto__=employee
+
+// __proto___ basically is used for the inheritence inside the object 
+// usign this we can access the parent properties an dmethids also 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
