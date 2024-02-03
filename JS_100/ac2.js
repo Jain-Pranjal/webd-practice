@@ -168,11 +168,38 @@ ram.__proto__=employee
 
 
 
+// Error handling block 
+// in the try block we write those bleock that can contain some error in it  theerror will be catch by the catch block
 
+// use the parseint function to covnert the datatype of the strikng into number 
 
+// a=Number.parseInt(prompt("enter the number"))
+// console.log(a);
+// if(isNaN(a)){  
+//     throw ReferenceError("sorry this is not alloweed ")
+// }
 
+// so we throw the self made error 
+// now for handling the error 
+try {
+    console.log(a*p);
+    // throw SyntaxError()
+} catch (error) {
+    console.log("error aa gya bhai so we have catch the error and does not break the flow of the program");
+    console.log(error);
+    // console.log(error.name);
+    // console.log(error.message);
+    // console.log(error.stack);
+    
+}
 
+// so on passing the error in the catch block we can print the error message and name and stack in it 
 
+// so koi bhi error ho we can catch that and ahndle it 
+
+// whenever we encountered some error the execution of the program stips there only so we cannot move formward 
+console.log("after the error ");
+// we use the finally in the function to check that the code will run even aftet the return keyword 
 
 
 
