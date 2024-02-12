@@ -198,40 +198,94 @@ try {
 // so koi bhi error ho we can catch that and ahndle it 
 
 // whenever we encountered some error the execution of the program stips there only so we cannot move formward 
-console.log("after the error ");
+console.log("Error ");
 // we use the finally in the function to check that the code will run even aftet the return keyword 
 
 
+// Async js 
+// we shoudl use the async and await for the execution of the asyncronous js 
+
+// we have to handel the promise of its resolve and reject things 
+// using the fetch api it gives usj the promise to us 
 
 
+// in set timeout we pass the callback function whcih means we are passing a funciton inside the another function as a parameter
+
+// whenever we have the async function then it will move into the paralle; thread and from that it will execute after the time has complete
+// THE SET timout function is an async function as it executes afetr the given time  it takes the callback function it 
+
+function deployHello(){
+    console.log("hello this is deployed hello");
+}
+// so pass the callback function inside the settimeout function 
+// setTimeout(deployHello, 200);
 
 
+// making a callback function whcih meand we pass a function as a argument in another function
+
+// callback is passing a funciton as a argument in anothe function 
+
+function callback(a,b){
+    console.log("this is the sum ");
+    console.log(a+b);
+
+}
+
+function calculator(x,y,Sumcallback){
+    // return x+y
+    Sumcallback(x,y)
+    // here the sumCAllbaclk contains the callback funcion 
+}
 
 
+// so we have to pass a fujnction as a agument in the function calling
+calculator(5,9,callback)
+// calculatork is a function in whoch i have pass the anpothet functiona s a argument 
+// we can create any funciton using the arroew fucntion 
+// let diff=(a,b)=>{
+//     console.log( a-b);
+// }
+
+// diff(4,2)
+// for passing the callback function we never pass witht he parenthesis with 
+// setTimeout(() => {
+//     // arrow function
+// }, 1000);
+// // passikng the direct fuction 
+// setTimeout(calculator, 5000);
+
+// the nesting of the callback is called the callback hell which is worst
+
+// now on calling of this fycntion it will execyte after 2 sec
+function getData(dataId,getnextdata){
+    console.log("getting data.....");
+    setTimeout(() => {
+        console.log("data with the",dataId);  
+        if(getnextdata){
+            getnextdata()
+        }
+    }, 2000);
+    // console.log("jello hello");  //it will not waoit fr the program to complete
+}
+// so it will execute the function after the 2 sec 
+
+// fujnction callikng me delay dekhna haij so i use the setikmeout ikniskde it 
 
 
+// function data(dataid){
+//     console.log("data :",dataid);
+// }
 
+// so we need to pass the arrow function otherwise it will execute immediately which isnot good
 
+getData(1234,()=>{
+    getData(256)  //not passing the next callback so it will give an error
+})
 
+// now if i want the next data then i can pass the callback funcion 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// so it will chekc if ke hai to he next data chala varna nhi 
+// to deal with the callback hell we use the promises 
 
 
 
