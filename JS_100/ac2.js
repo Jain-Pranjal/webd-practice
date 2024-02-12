@@ -316,9 +316,8 @@ function getData(dataId,getnextdata){
 // when we fetch from ai it gives su the pronmise to us 
 // we need to handel the promise onl that means we need to hadel the resolve and reject of the promise 
 
+/*
 // Api retuens us the promise
-
-
 
 
 function getData(dataId,getnextdata){
@@ -333,7 +332,6 @@ function getData(dataId,getnextdata){
         }, 3000);
     });
 }
-/*
 
 let val=getData(44,()=>{
     getData(55)
@@ -481,17 +479,88 @@ getData(111).then((res)=>{
 
 // so bascially we are returnig the getdata promise and and using then to resolve the operatr 
 
+// ASYNC AND AWAIT
+// async is used witht the functions and it returns a promise to us
+// async is used witht the functions and it gives a promise 
+async function hello(){
+    console.log("hello friends chai pee lo");
+}
+
+// so it is returnig a promise to us so async function alwasys return a promise to use and then we can use that 
+// async is always applied to the functiona nd it gives us a prmiseand awai basically paiused th eexecurtion till the promise is settled on 
 
 
+// await is alays be used in the async functiokn 
 
 
+// this is a asyn fucntion
+function api(){
+    // this will returna  promise after 2 s
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("Weather data !!");
+            resolve(200);
+    }, 2000);
+    })
+}
+
+// so this api call is async call as it will take the 2 sec to execute 
+// // await alaways lies insdie the async function and it will wait for the promise tpo be resolved then it will execute the next one 
+// async function getWeather(){
+//     console.log("fetching one.....");
+//     await api();  //so it will pause the neeeche ka code jab tak eska code fullfill  hi hota as async function always gives the promise 
+//     console.log("fetching two.....");
+//     await api();
+// }
+// getWeather()
 
 
+// so basically the await will wait for the current code until the promise is resolved
 
 
+// by doing this all the call of the api has encountered together but we need ke 2 sec ke delay ke baad ek ek karke aye 
+// api()
+// api()
+// api()
 
+// await kabhi bhi akela nhi chalta we need to put await inside the async function for the working
+// 
 
+// await always come under the async function so we need to use the asynawait inside the async only 
 
+// basically what we want ke async me wait hok ke phele ek kaam ho then other then ohter 
+
+async function getData(dataID){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("DATA");
+            resolve("Success")
+        }, 2000);
+    })
+}
+// await alays be in the async fucntion 
+
+// IIFE fucmtion that automatically executes on creation 
+(async function(){
+    console.log("fetching data 1...");
+    await getData(111)
+    console.log("fetching data 2...");
+    await getData(222)
+    console.log("fetching data 3...");
+    await getData(333)
+})()
+
+// so baiacll it await baically woats for the code to be fullfille the promise and then holds the neeche ka execution part
+getAllDetails()
+// getDetails9
+// humae eyah chaiye ek phele ek kaam ho then other kaam ho then aage ka kaam ho matlab async tareeke se kaam ho kste hai '
+// so agar neeche ka code hum chaite ke wait kare jab tak vo coed nhi execute hota so we use the await whoch is always used inside the async function 
+// we make onmly the async function 
+// async function automatically returns a promise to its calling 
+
+// await matlab us koo rukna oadega jab tak uska pomid excute nhi ho jata ans when jab vo execute ho jayega then neeceh ka code execute hoga 
+
+// so remember that tasyn cis always used by the function and it gives us the prmoise which is uised b the await which is always use inside hte async function 
 
 
 
