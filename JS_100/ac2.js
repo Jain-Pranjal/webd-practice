@@ -257,6 +257,9 @@ calculator(5,9,callback)
 // the nesting of the callback is called the callback hell which is worst
 
 // now on calling of this fycntion it will execyte after 2 sec
+
+/**
+ * 
 function getData(dataId,getnextdata){
     console.log("getting data.....");
     setTimeout(() => {
@@ -267,6 +270,9 @@ function getData(dataId,getnextdata){
     }, 2000);
     // console.log("jello hello");  //it will not waoit fr the program to complete
 }
+*/
+
+
 // so it will execute the function after the 2 sec 
 
 // fujnction callikng me delay dekhna haij so i use the setikmeout ikniskde it 
@@ -278,27 +284,202 @@ function getData(dataId,getnextdata){
 
 // so we need to pass the arrow function otherwise it will execute immediately which isnot good
 
-getData(1234,()=>{
-    getData(256)  //not passing the next callback so it will give an error
-})
+// getData(1234,()=>{
+//     getData(256)  //not passing the next callback so it will give an error
+// })
 
 // now if i want the next data then i can pass the callback funcion 
 
 // so it will chekc if ke hai to he next data chala varna nhi 
 // to deal with the callback hell we use the promises 
 
+// Promises
+// so we make a promise either it will resolved or reject the promise and then we had to tackle the situation 
+
+// inside it we alaso pass the callback function that is resolve and reject 
+
+// promise is also a object whcih means it has the prototype in it 
+// let promise=new Promise((resolve,reject)=>{
+//     console.log("i m a promise");
+//     resolve(200)
+//     // reject("Bad error")
+// })
+
+// so th epromise give the status and reson for the pass and failure
+
+// so prmise has 3 states in it 
+// fullfilled (resolved ), ject and pending 
+// the pending state takes the time to get get either resolved or reject in it so we can pass the message with it
+
+
+// resolve and reject botht are the callback function 
+// when we fetch from ai it gives su the pronmise to us 
+// we need to handel the promise onl that means we need to hadel the resolve and reject of the promise 
+
+// Api retuens us the promise
+
+
+
+
+function getData(dataId,getnextdata){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("Data is :",dataId);
+            resolve("Successfull fetched")
+            // reject(500)
+            if(getnextdata){
+                getnextdata()
+            }
+        }, 3000);
+    });
+}
+/*
+
+let val=getData(44,()=>{
+    getData(55)
+})
+
+// so then will work only when promise is resoved
+val.then((res)=>{
+    console.log("Fetching next data... ");
+})
+// the err contains the reject message in it 
+val.catch((err)=>{
+    console.log("error aa gya bhai ",err);
+})
+
+*/
+
+
+
+// this will give 100% data to the calling nbut we need tok tackel all the promise given by the API call using the fetch 
+
+// we need to tackel the promise geneerlaly goven by the api call 
+
+
+// if we fetch thre data from the aPI they gives us the promise and then we have to handel the promise only 
+// API returns back the rpomise to us so we need to handel the promise using the then 
+// eith the rpomise will be resolve or reject and till then it is in the pending state 
+
+// when the data is not there till then the promise will be in the pending zone so we need to fullfill the promise or reject it 
+
+
+
+// tpo tackel the promise we need to use the then and catch 
+// then for resolve and catch for the reject error showing 
+// we generally dela wittht he promise given to us usinkg the then and catch as then for eresolve and catrch for the reject (error showing )
+
+// so the aclling of the api gives us the promise to which we doe the tehn and catch
+
+
+// for handling the promise if fullfill we use the then and for reject the promise we use the catch 
+
+
+// then and cartch is used for handling promise ke agar fullfill hota hai promise then ko chala do and agar reject hota hai promise so catch ko chala do 
+
+// if promise is resoled then the function using the then will activated and if it is rejectd then function inside the catch will be activated 
+// Promise.then((res)=>{
+    // the res contains the message that wee had gien to the resolve oen so we can print this in this also 
+// })
+
+function asyncFun1(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("some data 1");
+            resolve("SUCCESS")
+            // reject("Errorrrrrr")
+        }, 4000);
+    })
+}
+function asyncFun2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("some data 2");
+            resolve("SUCCESS")
+            // reject("Network Error")
+        }, 4000);
+    })
+}
+// these fucntion will give the promise after the 4 sec and then it will get resolve 
+
+function asyncFun3(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("some data 3");
+            resolve("SUCCESS")
+            // reject("Network Error")
+        }, 4000);
+    })
+}
+// so basically it gives the promise after 4 s and then we can hadel the promise by using the then and catch 
+// use then for resolve and use catch for reject
+
+/**PROMISE CHAINING 
+ * 
+
+console.log("fetching data 1 .....");
+asyncFun1().then((res)=>{
+    console.log(res);  //printing the 4sec vala promise 
+    console.log("fetching data 2 .....");
+    asyncFun2().then((res)=>{
+        console.log(res);
+        console.log("fetching data 3.....");
+        asyncFun3().then((res)=>{
+            console.log(res);
+        })
+    })
+})
+*/
+
+
+
+    
+// but abhi yeah dono together aa rhe hai and we want ke ek promise fullfill ho jaye then next promise ho fullfill and aage chalta jaye bas 
+
+// promise chaining ho gey matlab ke agar phele vlaa resolve ho gay then next vala chalu hoga and then agar vo resolve hua then next vala hoga chalu 
+
+// so we do the chaining that means if one is resoled then only the second will get resolved and then thrd and so on 
+// so we had done the chaining of the promis ewhich means that if one will resolved then only other will get resolved and so on 
+
+
+// if it encounter the error then it will not solve further as there is no resolve of the function 
+// we can directly use the fucntion.then to get the promise from it 
+
+
+// WE CAN DIRECTLY GOVE THE FUCNTION NAME IN RESOLVE AND REJECT USING HE THEN AND CATCH 
+
+
+
+
+/**
+ * PROMISE CHAINING OF GET DATA
+
+getData(111).then((res)=>{
+    console.log(res);
+    return getData(333)  //thsi will also give the promise
+}).then((res)=>{
+    console.log(res);
+    return getData(555)
+}).then((res)=>{
+    console.log(res);
+})
+
+*/
 
 
 
 
 
+// so we can do the poromise chains by providing thre promise inside the resolved of another one inside other 
 
 
 
+// so resolve ke ander naya resolve likho matlab second vala tab he dega result jab phelea vala resolve hoga 
+
+// as it os returnig the promise only so we direclty return it and resolve it 
 
 
-
-
+// so bascially we are returnig the getdata promise and and using then to resolve the operatr 
 
 
 
