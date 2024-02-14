@@ -541,6 +541,8 @@ async function getData(dataID){
 // await alays be in the async fucntion 
 
 // IIFE fucmtion that automatically executes on creation 
+/**
+ * 
 (async function(){
     console.log("fetching data 1...");
     await getData(111)
@@ -550,6 +552,7 @@ async function getData(dataID){
     await getData(333)
 })()
 
+*/
 // so baiacll it await baically woats for the code to be fullfille the promise and then holds the neeche ka execution part
 getAllDetails()
 // getDetails9
@@ -561,6 +564,99 @@ getAllDetails()
 // await matlab us koo rukna oadega jab tak uska pomid excute nhi ho jata ans when jab vo execute ho jayega then neeceh ka code execute hoga 
 
 // so remember that tasyn cis always used by the function and it gives us the prmoise which is uised b the await which is always use inside hte async function 
+
+// one thing to remember that async is always used witht the fucntionthat masn we can make the any functions async and and fokr making the wait use the await in the async function only 
+
+// FETCH API
+// using the 
+
+// json always be in the " " commas and in the tring format always 
+// json is a light weight text format used to trandfer the infornation across the web 
+// for sending and recienvong we use thre fetch 
+// on fetching from the api it always gives us thre promise and we know how to deal with them fetch api -> promise 
+
+
+// JSOn is a type of the string and it supports all types of the datatypes in it 
+// json alwasy be in the " " commasn and is always be in the form ofk the key value pair 
+// json.parse is used to convert into object 
+// json.stringfy to convert object into the json  
+
+
+// So remembet that json is always of hte type STRING 
+// json.strinfy convert into the json format i.e string format 
+// parse convet the json into the object 
+
+const URL="https://cat-fact.herokuapp.com/facts"
+// using the ftch api it gives us the promise of the api 
+// using the fetch it givs us the promise to us 
+
+
+// fetch api gives the promise to us so here we meed to handlel the promise 
+
+// fetching the data is a async functionas it will take time to send the response to us so it needs to be wait befoe it takes the response from the api
+
+const catfacts=async()=>{
+    console.log("Getting data ....");
+    let Response=await fetch(URL)  //it will wait till completion 
+    console.log(Response);
+    let mydata=await Response.json()
+    console.log(mydata);
+}
+// fetch is used to fetch all the resources from the api 
+// used for recieiving and sending the recources to the end point
+
+
+// the fetch gives us the promise to us so we need to handle the promise either it will be resolved or rejectd 
+
+
+// async is always used in the function and it gives the promise to us 
+// we need to use the await in the async function only which measn that async gives the promise to us 
+
+// async is used to make the function asyncronous and in that it goves the promise to us and we use the await in the async function only 
+
+// remember that async is used with the function only to make them asynchrous which will give them a promise which is handled by await 
+// agar hum await use karte hai in async function then neeche vala code wait karega jab tak uska promise fullfilled nhi ho jata and also remember that await always come unde the async function only 
+
+// fetch api aslo givess us the promise 
+// catfacts()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
