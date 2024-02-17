@@ -24,16 +24,23 @@
 
 const URL="https://cat-fact.herokuapp.com/facts"
 
-// const getFacts= async ()=>{
-//     console.log("fetching data...");
-//     let response=await fetch(URL)
-//     console.log(response);  //json format
-//     let mydata= await response.json()
-//     console.log(mydata); //now in the object 
-//     console.log(mydata[0].text);
-// }
+const getFacts= async ()=>{
+    console.log("fetching data...");
+    let response=await fetch(URL)
+    console.log(response);  //json format
+    let mydata= await response.json()
+    console.log(mydata); //now in the object 
+    console.log(mydata[0].text);
+}
 
 // getFacts()
+
+// so basically humko 2 baar rukna padta hai ek baar to data ko fetch karne ke lie await lagana and then usko json me conver tkarne ke lie await lagana 
+
+
+
+
+
 // .json is also async in nature 
 // fetch is a async fucntion hai so we need to wait for it until ke jab promsie fullfill na ho jaye 
 // json function is also a async function 
@@ -207,8 +214,10 @@ async function api(id){
 }
 
 // await alays reside inside th easync function 
+/**
+ * 
 (async function() {
-
+    
     console.log("fetching data .....");
     await api(1)  //as we knwo that the async function always gives the promise so 
     console.log("fetching data .....");
@@ -218,6 +227,7 @@ async function api(id){
     console.log("finish ");
 })()
 
+*/
 
 //so basically using the await will wait for the promise tok SETTLE (resolve or reject no matter) and then it will resume the execution of the code
 // await humaeas aek async functionke under kaam karta hai 
@@ -234,10 +244,146 @@ async function api(id){
 // IIFE se hum private variabel bana skte hai jo ke hum use kar paye 
 
 
+// so js me async natire ke sath del karne ke lie hum function ko async bana dete hai and use karte hai await ka taki neeche ka coe wait kare 
+// await always async function ke under aata hai so make sure ke vo async ke neeche use ho 
+
+
+// API calls
+// fetch api badle me humko ek promise lakar dete hai jiskko hum baaad me tackle karte hai 
+// fetch api humko badle me promise return karta hai 
+
+// json format ko humko parse bhi karna hota hai 
 
 
 
 
+
+
+
+
+
+// async fucntion alawys return us a promise so we need to tackel i only 
+
+async function hello(){
+    return new Promise((resolve,reject)=>{
+
+        setTimeout(() => {
+            console.log("hello my friend");
+            resolve(200)
+        }, 3000);
+    })
+}
+// so basically jab tak vo promise resolve nhi ho jata tab tak neeche ka code execute nhi hoga 
+// so basically in api it will erturn a promise which is need to be reoslved and it wil tkae time so async fucntion always humko ek promise denge 
+
+// main()
+// await always run inside the async function so we have to make the async function to use the await 
+
+// so it will await for the complete resolved promise tab tak neeche nhi execute karega code and await always used inside the async function 
+
+// so fetch api gives us a promsie and and it is an async functiion so we need to await it as it will take time 
+// .json() is used to cobvert the api response into the json file which is alos a async fucntion that take time to complete 
+
+// as the fetch api takes some time and it alsoo gives us the promsie so we need to await the process so use the await and aslo the .json take stime to parse so jab tak sare kaam ho nhi jate we need to wait nhi to neeche ka code chal jayege bina uske upar avala pure hue 
+
+async function apicall(){
+    console.log(1);
+    console.log("Printing data ....");
+    let data= await fetch("https://jsonplaceholder.typicode.com/todos/1")     //poromsie de dega jab tak data na aa jaye 
+    data=await data.json()  //it will convert the response from the api into the json format  as it will also take some time to convert 
+    console.log(data.completed);
+    console.log("final data has beeen printed ");
+}
+
+// apicall()
+
+async function main(){
+    console.log(1);
+    console.log(2);
+    await hello()
+    console.log(3);
+    console.log(4);
+    await hello() 
+    await apicall()   //so basiaclly esne call mari function par jo ke api call kar rha hai so vo bhi wait karega jab tak data nhi mil jata 
+    console.log("final");
+}
+// main()
+
+
+// api call 2 awit fetch and json as dono takes the time to complete 
+
+// so fetch api me 2 baar await karna padega like phele data ko lane ke time await fetch and then usko json me parse kearne ke atime  await data.json()
+// await vo basically intezzaar karega jab tak promise settle na ho jaye 
+// settle ka matlab ya to reslve hoga ya to reject hoga bas pensding se bahar aa jayega promise 
+
+
+// await tab tak wait karega jab tak usak prmoise settle nhi ho jata (resolve or reject both any )
+
+// get req bsivally use karte hai to get the data from the servwer or the api and post request hum form ko submit karne ke lie karte hai 
+// taki post kar skte haid data into the server
+
+// jo promise hota hai vo bhi ek object he hota hai so we need to call the api jo ke humko ek promise he dega at the en and we have to wait it only jab promise SETTLE  na ho jaye (both reject nad resolve included in it )
+
+// fetch hume badle me promise return larega jisko humko wait karana hoga jab tak vo settled na ho jaye 
+
+
+async function getfood(){
+    console.log("Priniting DATA ....");
+    let response=await fetch("https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json")
+    data=await response.json()  //converting the response into the json object 
+    console.log(data.items[0]["barcode"]);
+    console.log("DONE....");
+}
+
+// getfood()
+
+// so bsically humko 2 baar use karna padta hai await ek baar to jab data kp fetch karte hai tab and jab data ko json me ka==convet karte hai tab as fetch ke time wakt lgta hai and json me convet karne ke time bhi time lgta hai 
+
+// fetch me hum sare request bhej skt ehai get post (data ko submit karvana intot he form vo post se hoga )
+// fetch api dono kaam karta hai req an res 
+
+
+async function gettingFacts(){
+    console.log("Getting facts ...");
+    let response= await fetch(URL)
+    data=await response.json()  //conversion into json also takes the time so use the await 
+    console.log(data[0].text);  //so basivaclly yeah humko ek promise dega jisko humko tackle karna hoga 
+    console.log("END");
+    document.body.querySelector(".catfact").innerHTML=data[0].text
+}
+document.getElementById("fact").addEventListener("click",gettingFacts())
+
+// so api call par hum 2 baar wait use karege ek to data ane par and usko json me converrt karne ke lie as data ko ane ke lie bhi time lgta hai and usko json me convert karne ke lie bhi time lagega 
+// so await jab api se data ayega us par bhi lagega tai neeche ka code execute na ho jaye 
+
+
+async function details(){
+    console.log("i will print facts ");
+    await gettingFacts()
+    console.log("these are the facts ");
+}
+
+
+// we can make the fucntions async in the same way arrow functions
+const love=async()=>{
+// making the fucntion as hte variable name only 
+    let data=await fetch(URL)
+    data=await data.json()
+    console.log(data);
+}
+
+// so after getting the data we always have to convert it into the json format so it also takes some time t hats why we have to await it 
+
+// json format is the object format similarity so uskok convert into the stringuse the stringfy 
+// jo api hoti hai vo humko response me json format me deti hai so we have to convert it into the javscfript object notation 
+
+
+// so basicaly response.json will convert the json format into the javascript object and that is easy to achieve the data
+// .json input me JSON file leta hai and output me json object banakaradeta hai jo ke use kar skte hai 
+
+// .json karke hum api ke through gye kare call se usko object me convert kar skte hai
+// 404 bad req from the clien site 
+// jab hum kuch req and res bhejte hai api ke through then we can pass the extra info using the headers 
 
 
 
