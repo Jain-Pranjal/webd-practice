@@ -351,7 +351,7 @@ async function gettingFacts(){
     console.log("END");
     document.body.querySelector(".catfact").innerHTML=data[0].text
 }
-document.getElementById("fact").addEventListener("click",gettingFacts())
+// document.getElementById("fact").addEventListener("click",gettingFacts())
 
 // so api call par hum 2 baar wait use karege ek to data ane par and usko json me converrt karne ke lie as data ko ane ke lie bhi time lgta hai and usko json me convert karne ke lie bhi time lagega 
 // so await jab api se data ayega us par bhi lagega tai neeche ka code execute na ho jaye 
@@ -386,21 +386,177 @@ const love=async()=>{
 // jab hum kuch req and res bhejte hai api ke through then we can pass the extra info using the headers 
 
 
+// advacned js 
+// hoisting means ke var bina declare kare aap acess kar skte ho lekin vo error nhi dega tab bhi but not possible in let and const
+try {
+    console.log(a);
+    let a=7845 ;
+    throw error
+} catch (error) {
+    console.log("please declare first");
+}
+// so it will print undefined as their is not defined yet 
+
+
+// in the hoisting the declaration will mvoe to the top the file and the initialisation will remain the undefined even as it 
+// so in the hoisting the variabkle decalration will move to the top of the document and it is shown only in the var not in the let or const 
+// 7 datatype :- number string bool null undefined symbol 
+
+// diff types in js :- -primitive and reference 
+// reference contains the () {} [] :-
+let arr=[664,45,465,53,453,4,31,5]
+new_arr=[...arr]
+new_arr.push("pranjal")
+// console.log("original one :- ",arr);
+// console.log("new one :- ",new_arr);
+
+// so basically copying th evalue in the refernce also changes th eoriginal one also 
+// so reference me copy value nhi hoti refercne copy hota hai so vo original vale me bhi change kar deta hai and to save it from the original change then use the [...arrayname]
+// primitive me value real copy hoti hai and it will no change the original one 
+let obj={
+    name:"pranjal",
+    age:55,
+    contact:556464,
+    hello:()=>{
+        // this is the method which means fucntion inside the object 
+        console.log("hello sir");
+    }
+}
+// this will also chaneg the original oneas we it is passsing a refernce value not a true value 
+newobj={...obj} //making the actual copy of the value only 
+// newobj=obj
+// now only changes will be done in the copied one 
+newobj.classs=12;
+
+
+// console.log("original one :- ",obj);
+// console.log("new one :- ",newobj);
+
+// so in the refercne type the refercne value is copied not hte actual one thats why it makes the chnages in th original one also so () { } [] are all the referecne type so to copy the refernce value use the ... [...] {...} (...) only 
+
+// the ... is called the spread operator 
+// so we can copy the value from th ereferenc etype using the spread operator ...
+
+// so all the words such as null none undefined 0 are fasle only sik they will we ijn the false state 
+
+// if(0){
+//     console.log("love");
+// }else{
+//     console.log("aaaa");
+// }
+
+// the main thing abut the primitive and referce  is that in the primitive the actual copy is passd to it and it will not hcange th eoriginal one 
+// in the reference the reference value is passed and thus in copying it will change the original one also so we need to use the ... in it to pass the actual copy which will not change the original oneth erefernce one include the () {} [] all the bracketts vale so passing th evalue in the reference use the ... operator 
+// 
+// we use the for each loop for the array 
+Array.from(Array(5).keys())
+// in arrays we store all the multiple homon data inside the one variable 
+// arrays are basically the objects in the js 
+// splice is basically used to add , replace r delete the elemetns insdie the array 
+
+
+// some method in array basically check the condition and is simialr to filtrt
+
+function checkage(age){
+    return age>19
+}
+
+const ages=[12,55,66,44,88,99,33,22]
+console.log(ages.some(checkage));
+
+// so basically some returns the true if any elemetn inside the array matches the function and returns false if none will match 
+// array methids that chege :-push pop shoft unshift sort splice these all changes the original array 
+
+// in the ibjects we have the property and methods (functions that has been declared inside object is called the method )
+// so if we want to coopy the reference vale matlab jo bi( { [ ]}) en backets me aati hai then we have to use the ... operator whcih will copy the copyied value not the reference value from it 
+
+// window object is of the browser not of the js 
+// var adds to iteslef into the woindow object where let and cosnt dont 
+// window is the object that contaisn additional functionalyty which is not a part of the js it is a part of the web browser 
+// window is a global object jiske features ko hum access karskte hai 
+// var khud ko window me add karta hai but let and const nhi karte in the window . var adds itself inside the window object whereas the let and cosnt did not 
+
+// var is accessible inside th ewindow thats why we dont use this as it is globally availbelint he window object 
+
+// so var adds itself int he wndow object whereas the let and const dont 
+var name="bittu"
+let naam="pranjal"
+// browser context api contains 3 things in it window , heap memory and stack "
+//window to global object hai jo ke browser provide karta hai with lots of te featurs in it .
 
 
 
 
+// /the browser provide 3 things which is calle dht browser context api which include the window , stack and the heap memory 
+// heap memory ke ander hum bacilly imtermediate data store karte hai 
+// so basically jo bhi intermediate data generate ho rha hai vo aapka heap memory me store ho rha hai 
+// so jo variable sata store karta hai and the intermediate data vo basicall heap memory me store hota hai 
 
 
+// what is execution context ?
+/**
+ * jab bhi hum koi fucntion chalate hai to vo ek img container baman leta ahi jisme 3 cheeze hoti hai variable , fucntions inside it and the lexical env 
+ * 3 variabnle fucntion inside and the lexical env 
+ * so on the execution of th efunc it make th eimg container jiske ander 3 cheeze hoti hai variabel , funciton inide it and the lexcial env of the function 
+ */
+// bowser context api kuch nhi hai bas browser humko 3 cheeze det ahai jo ke hai window (global object), stack and the heap memory ko ke contain karta hai the data or he intermediate data of th evariabel 
+
+// ot remember ke jabbhi aapka funciton execute hota hai use vakte uska a execution context ban jata hai jo ke ek img contianer hai jiske under 3 cheeze aati hai jo ke hai variable , funciton insdei it and the lexical en v of that funciton 
+
+// lexical env humko yeah bata skta hai ke function kya  acess kar skt ahai aur kya nhi so fucniton apne ander fun ke varoabelko kabhi access nhi kar skta 
+
+// so at last execution context fucniton ke execution ke waqt chalt ahai jiske under 3  chezze hoti hai variable , funciton inside it and th lexical env jok ke bataat hia ke funciton kis kis se accessable hai 
+
+// function execute uske sath he aapka executuion context ban jata haiu jisme 3 cheezxe hoti hai variable , funciton inside it and lexical env (ke vo function kaha kaha aceessible hai) so lexical env humko bataat he ke fucntion kis kis ko access kar skta hai and uska scope kaha tak haii
 
 
+// mow using the spread operator actual me value copy hue hai na ke refernce value aye hai so basically aab it will not change the originalone 
+// at las tthe imp thing is that o the excution of the funciton their th=is the executuion context which is the img contianer that is made up of contian 3 thongs in it whcih is the variable , funciton inisde it and the lexical env of it 
+// so allt hhebrackets items are the reference datatype inw hcih the refernce value is passed so we need to use the spread operator in it (...) operator 
+
+// so copy like the 
+// newarr=[...arr]
+// newonbj={...obj}
+// this is how we real copy of hte reference datatype 
+// agar hum en new mw hcange karege so it will not hcange the old one as now no refernce is passed only the copied value is passed in it 
+// falsy me  0 nan  false undefined null document.all use hota hai jo ke intercept karte hai false ko 
+// foreach for the array in whcih we pass the callback funciton it 
+
+// for the values obj[key]
+// for (const key in obj) {
+//     const element = obj[key];
+//     console.table(key,element)
+// }
 
 
+// first class functions 
+// high order function are those function that either return a function to us or we pass function as an argument to anothe rfujnciton sok call back is a HOF
+
+// high order function are those function that either takes the function as an argument or return thr function as output 
 
 
+let fun1=((name)=>{
+    console.log("your name is ",name);
+})
+// in js functions are the first class functions 
+// so basically i can store a function as a variable just like a variable in it 
+// in js functions are called the first class function which means that we 
 
 
+// so first class function me we pass the function as an argument to another one only 
+function details(Person){
+    Person()  //now the person contaisn the function which we can access it 
+}
 
+details(function name(){console.log("my name is jain sahab");})
+// array type is the object so the element is stored in the format of the object in it 
+// thats why we can store the elemnt at the index value of -1 alos 
+
+
+// for removing something from the object use the delete 
+delete obj.name;
+console.log(obj);
+// so use the delete operator in order to delete the property from the object 
 
 
 
