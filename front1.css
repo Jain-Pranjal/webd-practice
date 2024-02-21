@@ -1,0 +1,61 @@
+/* always set up the bioler plate for the css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    height: 355px;
+    width: 355px;
+    background-color: aquamarine;
+    position: relative;
+}
+.item{
+    background-color: rgb(85, 0, 255);
+    z-index: 1;
+    height: 34px;
+    width: 34px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);  
+    /* x and y  */
+    /* transform contains all the 2d tranformation in it like rotate scale  */
+    /* animation: moving 2s timing-function delay iteration-count direction fill-mode; */
+}
+
+
+/* aboslute vala apne non postioned eleemtn parent ke respect me set up hoga 
+means agar usal parent other than static hoga then it will set up acc to the parent  */
+
+.center{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+/* display prop is applied on the parent  */
+
+/* abosolute apne parent ke respect me work karte hai  */
+
+/* position 
+static is by default 
+relative is witht the free 
+absol for the parent resprc t
+in the static position non of the prop applied 
+abosolue me vo posution hota hai to the nearest position ancestor block 
+*/
+
+/* so to make the center 
+possiton :absolute 
+top and left 50% and transform translete -50%  both  */
