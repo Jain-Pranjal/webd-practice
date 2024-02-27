@@ -59,3 +59,41 @@ abosolue me vo posution hota hai to the nearest position ancestor block
 /* so to make the center 
 possiton :absolute 
 top and left 50% and transform translete -50%  both  */
+.passwd{
+    position: absolute;
+    background-color: aqua;
+    padding: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+.passwd i{
+    cursor: pointer;
+}
+.text-pass{
+    display: flex;align-items: center;justify-content: center;
+}
+
+.showpass{
+    background-color: red;
+}
+
+.alphabets{
+    font-size: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

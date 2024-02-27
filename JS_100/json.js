@@ -559,6 +559,104 @@ console.log(obj);
 // so use the delete operator in order to delete the property from the object 
 
 
+// browser context api humko bascailly 3 cheeze provide karta hai window , stack and the heap memory to us 
+// window ke ander vo sare functionalties hoti hai jo ke hum use kar skte hai they are not oprovide by the js they are provided by the window obbject of the js
+// heap memory basically intermediate result store kata hai in the memory of the calc 
+// so basically intermediate result ko store karne ke lie we use the heap memory in it 
+// so the intermediate data is sotred insode the heap memory 
+// the browser context api provides us the 3 things to us :- window heap memory and the stack 
+
+// the execution context provied 3 things means jab bhi funciton execute hoga tab hi vo ek imaginary container bana dega jiska matlab usme 3 things jogi variable , functions inside it and the lexcical env
+// so the browser context api humko 3 cheeze dete hai window object , stack and the heap memory to us e
+// executuin context matlab jab bhi function execute hota hai vo ek imaginary container bana deta hai jisme 3 cheeze hoti hai vacriables, funciton and the lexical env it will  be perfomed 
+// us finction ke cheeze hogi us execution ocntext container me 
+
+// so remember jaise he function execute hota hai vaise he us function ka imginary box ban jayega jisme 3 cheeze hoti hai :- variable , funciton inside it and the elxical env of the function which means ke us fucntion ka scope kaha tak hoga 
+
+
+// lexical env tells that the function can access which ? so basically jo jo function access kar skta hai vo lexical env batta hai 
+
+
+function hello(){
+    var a=5;
+    console.log(a);
+    return function hi(){
+        var b=55;
+        console.log(b);
+    }
+}
+
+let c=hello() //c ke pass ek function aa gya hai return me so it now acts as  a function so we can run it also 
+c()
+// so the lecical env will tell ke aapka funciton aone under kin xheezo ko access kar skta hai 
+// refernce data type me sare beracket vale aata hai and we can copy them fully by using the spread operator in it 
+
+
+let show=document.getElementById("password")
+let eye=document.getElementsByClassName("ri-eye-off-line")
+document.querySelector(".ri-eye-off-line").addEventListener("click",()=>{
+    if(show.type==="password"){
+        show.type="text"
+    }
+    else{
+        show.type="password"
+    }
+})
+
+// document.querySelector(".ri-eye-off-line").addEventListener("click",()=>{
+//     show.type="password"
+// })
+// use the if else condition to change the type of the inorder to oglle the class 
+
+// making a alohabet generator and stopping it 
+/**
+ * 
+let alphabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alpha=document.querySelector(".alphabets")
+
+let i=0;
+function updated(){
+    let start=setInterval(() => {
+        alpha.textContent=alphabets[i]
+        i++
+        
+    }, 20);
+    if(i==25){
+        i=0
+    }
+}
+
+
+document.getElementById("stop").addEventListener("click",()=>{
+    clearInterval(start)
+})
+
+updated()
+*/
+
+// thast y we use the async await function which means jo bhi function time laga rha haiexecute hone me make it async and then put await ke jab tab vo resolve na ho jaye tab tak neecce ka code will not work
+
+// first class finction
+
+// HOF are those fucntion in which fucntion is passed as an argument or a fucntion returns a another function 
+
+// in js fucntion are the first class function means we can save them in the variable name 
+let myfun=function(a){
+    console.log("hello sir ");
+    a()
+}
+// myfun="prnajal"
+// so basically we can treat the fucntion just like the normal function and we can store them in the variable also 
+
+myfun(function greet(){
+    console.log("helloooaosoaoa");
+
+})
+// so basically first class function ek concept hai jisme hum funcitons ko variable ke tarah treat kar skte hai so we can store the function inside the variable and use them 
+
+
+
+
 
 
 
