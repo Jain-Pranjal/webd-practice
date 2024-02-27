@@ -655,6 +655,76 @@ myfun(function greet(){
 // so basically first class function ek concept hai jisme hum funcitons ko variable ke tarah treat kar skte hai so we can store the function inside the variable and use them 
 
 
+// advanced more concept 
+// HOF are those functions in which they accept the function as the argument like the callback or they return a fujnction 
+// so we can pass a function as a argument inside the hof or we can return a fucntion inside the another function also 
+
+function greet(a){
+    a()
+    return function(){
+        console.log("kjaadjksnjs");
+    }
+}
+// passing a function isnde the anotherr function is also a HOF
+let b=greet(function(){
+    console.log("jain");
+})
+console.log(b);
+
+
+class animal{
+    constructor(){
+        console.log("hey i m constructuor ");
+    }
+    age=55
+    name="poin"
+}
+
+// so just by making the construcutor the construcutor function invokes and do the following task in it 
+// so as u have seen it is used insde the clas but we can use it a s the constructor fucntion alone 
+let myobj=new animal
+
+// construcutor runs by the new keyword 
+
+// inside the event listneer it will give me a that thing on which mene vo event listener lagaya hai 
+let myitem=document.querySelector(".item")
+myitem.addEventListener("click",()=>{
+    
+})
+// open and funciton me this will return a window 
+// in the method it will return a parent object 
+// in the evenet listenner it will return a parent object 
+
+
+function sancha(){
+    this.width=55;
+    this.flavour="good"
+}
+
+let a =new sancha()
+console.log(a);
+// so casically we have the same constructor function inside the class and objects similarly same as in the class or the objects 
+
+// making a fucntion with the this keyword and the 
+function book(author,publisher,price){
+    this.author=author;
+    this.publisher=publisher;
+    this.price=price;
+    console.log(`the name of the book is ${this.author}`);
+}
+// so jsut use the new keyword to make the construcutor function it is just like the sancha that we can make manyv instnace sout of one 
+let book1=new book("prnajal","jaicno",5000)
+// console.log(book1);
+// ocnstructir me aap jo bhi likhoge vo direclty execute kar dega bina uske calling ke just humko uska ek instance banna padega 
+
+
+
+
+
+
+
+
+
 
 
 
