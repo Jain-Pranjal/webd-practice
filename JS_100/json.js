@@ -717,19 +717,58 @@ let book1=new book("prnajal","jaicno",5000)
 // console.log(book1);
 // ocnstructir me aap jo bhi likhoge vo direclty execute kar dega bina uske calling ke just humko uska ek instance banna padega 
 
+// as we know that in js the functions are the first class function this means that we can save the function as a variable type only this means that ke funcion ek dum varibale ke tarah save kar skte hai hum 
+// and just like the variable we can change the function also 
 
 
+const myname=function (name){
+    return (`my name is ${name}`);
+}
+// this funciton basically retutn the value on calling to the calling function 
+console.log("so hello every ",myname("pranjal jain"));
+
+// ocnstr function hota hai co ek tareka hai bkejct ko instance banne ka 
+function jain(playername){
+    this.player=playername
+}
+// let jainco=new jain("loe")
+// any instance made wtht the constrcutor function of the jain will have the player in  it to whcih i will pass the playwr name 
+
+// iife 
+// helps us to avoid the polluting th eglobal space and the also helps to making of the private variable 
+let myIIFE=(function(){
+    console.log(" this is IIFE love");
+    var hate="hateable "  //this variable is private and we cannot access this 
+
+    // i will return a object 
+    return {
+        // getter is used to get the private value 
+        getter:function(){
+            console.log(hate);
+        },
+        setter:function(val){
+            hate=val;
+            console.log(hate);
+        }
+    }
+
+})()
+// any variable that we make inside it will become private
+// iife ke ander jo variable bante hai vo private hote so we cannot access them so humko unko return karvana hota hai inside the object using the getter and setter 
+
+// using the iife we can make the private variable and it will aslo dont pollute the globalspace in the code 
+
+// so basically iife will make the variable as a private variable so that it cannot be accesseasily 
+// inside the iife varriable decalred are private in nature so we cannot access them outisde of that so we need to use the getter and setter that will give the value of the private variable to us 
+
+// a function inside the obejct is called a method 
+// any variable that is made insdei the iife is the private variable 
+
+// so we can print the value using the getter and update the value using the setter 
+//we can return th eprivate variable using the getter and update the value using the setter so that no one can access the private value easily
+// using the iife we can not only invoked the functions instantly but also we can make the private variable there so that it will not accessed by outside and it will be only safe
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+(function (){
+    console.log("pranjal kite amam");
+})()
