@@ -682,7 +682,7 @@ class animal{
 
 // so just by making the construcutor the construcutor function invokes and do the following task in it 
 // so as u have seen it is used insde the clas but we can use it a s the constructor fucntion alone 
-let myobj=new animal
+// let myobj=new animal
 
 // construcutor runs by the new keyword 
 
@@ -736,7 +736,7 @@ function jain(playername){
 
 // iife 
 // helps us to avoid the polluting th eglobal space and the also helps to making of the private variable 
-let myIIFE=(function(){
+let ans=(function(){
     console.log(" this is IIFE love");
     var hate="hateable "  //this variable is private and we cannot access this 
 
@@ -751,8 +751,9 @@ let myIIFE=(function(){
             console.log(hate);
         }
     }
-
 })()
+// so use the in nustry words only getter and setter 
+// iife are the things that we want to use single in the program only  
 // any variable that we make inside it will become private
 // iife ke ander jo variable bante hai vo private hote so we cannot access them so humko unko return karvana hota hai inside the object using the getter and setter 
 
@@ -769,6 +770,124 @@ let myIIFE=(function(){
 // using the iife we can not only invoked the functions instantly but also we can make the private variable there so that it will not accessed by outside and it will be only safe
 
 
-(function (){
-    console.log("pranjal kite amam");
-})()
+// in js the funcitons are called the first class function which means that we can store the functions inside thevariable name and also use them as the variable only 
+// os basically we just return the value inside the object whcih will gives the value back to the user in the blank object only
+// so prototype is used for ht enuild in methods inside the object for the work
+
+// so basiaclly we can so the inheritenvce in 2 ways either with the class and objects or the object me proto proprry ka use kkre bhi hum log inheritence kar skte hai 
+let prajal={
+    "love":"no"
+}
+// so basiaclly it inhertis the property inside it using the proto fucntion of the prototype 
+obj.__proto__=prajal
+
+
+// this keyword 
+// in the global scope it gives the window and in the function alsok 
+// in the method it gievs the parent object 
+// a function that is made inside the object is called the method  
+
+// so inside the fucntion also it scope is limited to the variavle only 
+obj.myfun=function (){
+    console.log("hello this is methdod");
+}
+
+// so inside the object the value of this keyword id the parent object means ke agar humne koi method banaya hai (funciton inside the object is called a method ) then usk thsi ke value will give the whole parent object 
+let myobj={
+    name:"pranjal",
+    age:55,
+    college:"BMPS",
+    // inside the object the fucntion made is called the method means ke properry ke value is a method (a funcion )
+    greet:function(){
+        console.log("hello sir madam ");
+        console.log(this);  // this wil give the parent object isndie the methhod 
+    }
+    // inside the method the this will return a parent object 
+    // so this will give the parent ibjct inside the method 
+}
+
+// call apply bind 
+// os if we want to change the this value we can use the call 
+
+// call is basically ke jab tumhe function cahlana hai and by default jo uski this ke value hai wondow usko change karke kise aur ke tarf pint karvana hai then use the call
+function abcd(val1,val2){
+    // console.log(this.greet());
+    console.log(this.college);
+    this.bloodgrp="B+"
+    console.log(this.bloodgrp);
+    console.log(val1,val2);
+}
+// now by using this function i can point to the object and changes or uses its value 
+// now this function will point to the obj and we can access the mehtod and the variable of the objnect using that function 
+
+// abcd.call(myobj)
+// bsiaclly jab hume function kise obje par chalana ho then we can use the .call funciton which means that now the this will poin tot the object 
+
+// so if we have the parameter aslo we can pass in the call only 
+// so we pass the value as well as we pass the this to which we have to make the this operator 
+// abcd.call(myobj,5,9)
+
+// apply is similar to the call only 
+// we aoss the value of the paramaet inside the array by using the apply 
+// so just pass the value of the parameter insdie the array 
+
+
+// passing the value in the array only by using the apply 
+abcd.apply(myobj,[33,44])
+
+// then what is the use of the call apply bind 
+// they are used when ke jab bhi hume koi function chalana ho and by default jo fucntion me this ke value window hoti hai then we an change that this ke value to any other object so we use the call or apply 
+
+// so bind ko basivally store karna hota hai so that we can use the value 
+// binds basivaclly binds th efunction wiht the object and returs us the new function to us 
+
+// jab bhi funation cahlana hai jisme me this ke value kuch aur hai and we want le this ke value ke koi obj ho then we use the call apply bind 
+// the .bind will give the funcvtion and then we have to store tit 
+
+// bindedfun=abcd.bind(myobj,111,222)
+
+
+// this operator :-
+/**
+ * global scope and the fucntion ke ander this is window 
+ * inside the method(funciton that is made in the obejct ) this refers to the parent object 
+ * and in the event listenrer this refers to the element only 
+ * 
+ * sometimes we want to aply the function on the object and changing the default value of the  this from windw to the object then we use thr call and apply 
+ * function.apply(myibject , parameter if any ) 
+ * bind is used to bind the fucntion with the obejct and it returns back the function to us 
+ */
+
+// now the abcd function is binded to the obj and we this is set to the obj 
+bindedFun=abcd.bind(myobj,1111,2222)
+
+
+// pure and impure functions 
+// pure function measn ke har baar ame input par humko same output mil rha hai and it does not changing the global variale 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
