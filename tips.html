@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tips</title>
+    <link rel="stylesheet" href="tips.css">
+</head>
+<body>
+   <!-- transition and the animation proprty -->
+   <!-- either we can use the transition for the small purpose animation or we an use the animation property -->
+   <div class="container">
+    <div class="box"></div>
+   </div>
+   <button id="Anistop">Click to stop</button>
+   <button id="Aniplay">Click to play</button>
+
+
+    <script>
+        let box=document.querySelector(".box")
+        document.querySelector("#Anistop").addEventListener("click",()=>{
+            if(box.style.animationPlayState==="running"){
+                box.style.animationPlayState="paused"
+            }
+            else{
+                box.style.animationPlayState="running"
+
+            }
+        })
+        // document.querySelector("#Aniplay").addEventListener("click",()=>{
+        //     document.querySelector(".box").style.animationPlayState="running"
+        // })
+        
+    </script>
+</body>
+</html>

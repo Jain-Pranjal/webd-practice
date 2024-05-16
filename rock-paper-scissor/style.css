@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+.main{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.5em;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    font-weight: bold;
+    /* text-align: center; */
+    
+}
+.main-img{
+    margin: 10px 0px;
+    background-color: lightgreen;
+    width: 100%;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;  
+    box-sizing: border-box;
+    padding: 5px 0px;
+    /* the gap property is given to the parent elemnent  */
+    /* gap is used to give the margin bw the elemetns so that they dont stick together  */
+}
+
+.pic{
+    box-sizing: border-box;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    /* margin: 15px 0px;  in box sizoing border box margin dont make the effect as they are outisde 
+    box size border box will take acc onn ly for content border and padding  */
+    cursor: pointer;
+}
+
+.pic:hover{
+    border:6px solid black;
+    opacity: 0.8;
+}
+
+.final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result{
+    padding: 15px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+
+}
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+  
+  #user-score,
+  #comp-score {
+    font-size: 3rem;
+  }
+
+  .msg-container {
+    margin-top: 5rem;
+    display: flex;
+  justify-content: center;
+  }
+  
+  #msg {
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+

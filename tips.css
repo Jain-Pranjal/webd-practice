@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    height: 50%;
+    background-color: red;
+    transition: all 3s ease-in 1s delay;
+}
+/* so we use the transition property for the small amt or kind of the animation but for the large animationnpurposes we sue thre animation an dkeyframes  */
+.box{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(0, 255, 8);
+    /* transform: scale(2) translateX(22px) translateY(33px) ;
+    transition: all 2s ease-in 1s; */
+    animation: pranjal 4s ease-in 1s infinite alternate ;
+
+}
+/* by the use of the animation property we can apply multiple animation property on a asingle element at a time so that we can show multiple things in the animation  */
+/* animattion banne ke lie we need to define the key frame ke kis tim interval par kya kya hoga and kis par kya  */
+/* keyframe basically timing ke upar kaam karta hai ke kis time par kya animate karuga  */
+/* bas keyfram eka name animation me dalo and apply multiple animation property all at once  */
+/* for simple anomation use the transition property and for the complex use the animation one  */
+@keyframes pranjal {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(500px);
+        background-color: green;
+    }
+    100%{
+        transform:scale(5) translateY(50px);
+        background-color: burlywood;
+
+    }
+}
+
+/* use the trasnsition roperty for small kind of the animation and use the animation and keyframe for big kind of that  */
+/* i have to tell ke meko kispar transisiton karna hai  */
+
+/* for using the animation we need to use 2 things keyframes ke kab se kab kya hoga and the anmation property  */
+
